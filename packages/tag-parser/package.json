@@ -1,0 +1,22 @@
+{
+  "name": "@spectera/tag-parser",
+  "version": "1.0.0",
+  "description": "Tag parsing library for discord tags",
+  "keywords": [],
+  "author": "undied",
+  "license": "Apache-2.0",
+  "packageManager": "yarn@3.1.1",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "bundle": "rollup -c",
+    "build-types": "tsc --emitDeclarationOnly --outDir dist/types",
+    "dev": "yarn build && yarn build-types && yarn bundle"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.2",
+    "rollup": "^2.61.1",
+    "rollup-plugin-dts": "^4.0.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.3"
+  }
+}

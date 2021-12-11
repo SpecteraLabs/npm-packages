@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "strict": true,
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true
+  } 
+}
