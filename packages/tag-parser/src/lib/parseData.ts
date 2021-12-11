@@ -1,4 +1,4 @@
-const optionsRegex = /\{[^}]*\}\}/g;
+export const parsingRegExp = /\{[^}]*\}\}/g;
 
 export function parseData(name: string, description: string, options: string, response: string) {
 	const parsedOptions = parseOptions(options);
@@ -7,13 +7,14 @@ export function parseData(name: string, description: string, options: string, re
 			name,
 			description,
 			options: parsedOptions
-		}
+		},
+		response
 	}
 }
 
 function parseOptions(options: string) {
-	if (!optionsRegex.test(options)) throw new Error('Invalid options provided');
-	const parsedOptions = options.match(optionsRegex)!;
+	if (!parsingRegExp.test(options)) throw new Error('Invalid options provided');
+	const parsedOptions = options.match(parsingRegExp)!;
 	const optionsArray = [];
 	for (let option of parsedOptions!) {
 		option = option.trim().replace('{{', '').replace('}}', '');
