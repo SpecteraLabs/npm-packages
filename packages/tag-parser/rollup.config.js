@@ -23,7 +23,6 @@ export default defineConfig([
       {
         file: "bundled/index.d.ts",
 		format: "es",
-		sourcemap: true
       },
     ],
     plugins: [dts()],

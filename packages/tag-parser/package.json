@@ -1,6 +1,6 @@
 {
   "name": "@spectera/tag-parser",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Tag parsing library for discord tags",
   "keywords": [],
   "author": "undied",
@@ -9,6 +9,11 @@
   "exports": {
     "require": "./bundled/index.cjs",
     "import": "./bundled/index.mjs"
+  },
+  "homepage": "github.com/SpecteraLabs/tag-parser",
+  "repository": {
+    "type": "git",
+    "url": "github.com/SpecteraLabs/tag-parser"
   },
   "types": "./bundled/index.d.ts",
   "scripts": {
