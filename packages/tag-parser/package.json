@@ -6,6 +6,11 @@
   "author": "undied",
   "license": "Apache-2.0",
   "packageManager": "yarn@3.1.1",
+  "exports": {
+    "require": "./bundled/index.cjs",
+    "import": "./bundled/index.mjs"
+  },
+  "types": "./bundled/index.d.ts",
   "scripts": {
     "build": "node ./scripts/build.mjs",
     "bundle": "rollup -c",
