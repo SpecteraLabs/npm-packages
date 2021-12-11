@@ -9,8 +9,9 @@
   "scripts": {
     "build": "node ./scripts/build.mjs",
     "bundle": "rollup -c",
+    "clean": "node ./scripts/clean.mjs",
     "build-types": "tsc --emitDeclarationOnly --outDir dist/types",
-    "dev": "yarn build && yarn build-types && yarn bundle"
+    "dev": "yarn clean && yarn build && yarn build-types && yarn bundle"
   },
   "devDependencies": {
     "esbuild": "^0.14.2",
