@@ -1,3 +1,3 @@
-export * from './lib/parseData';
+export * from './lib/TagParser';
 
-export * from './lib/parseResponse';
+export * from './lib/errors/ParsingError';

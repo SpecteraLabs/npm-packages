@@ -1,17 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "ES2021",
-    "module": "esnext",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "strict": true,
-    "outDir": "./dist",
-    "skipLibCheck": true,
-    "baseUrl": "./src",
-    "moduleResolution": "node",
-    "declaration": true,
-    "declarationMap": true
-  } 
+	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"allowJs": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"baseUrl": "./src",
+		"composite": true,
+		"noUnusedLocals": false
+	},
+	"include": ["./src", "./src/**/*.json"],
 }
