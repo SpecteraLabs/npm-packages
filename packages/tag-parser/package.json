@@ -1,6 +1,6 @@
 {
 	"name": "@spectera/tag-parser",
-	"version": "0.2.1",
+	"version": "0.3.1",
 	"description": "Tag parsing library for discord tags",
 	"keywords": [],
 	"author": "undied",
@@ -18,7 +18,7 @@
 	"types": "./bundled/index.d.ts",
 	"scripts": {
 		"build": "node ./scripts/build.mjs",
-		"publish": "yarn dev && npm publish",
+		"npm-publish": "yarn dev && npm publish",
 		"bundle": "rollup -c",
 		"clean": "node ./scripts/clean.mjs",
 		"bundle-types": "dts-bundle-generator --config=dts-bundler.config.js",
