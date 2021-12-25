@@ -1,8 +1,6 @@
-import type { ApplicationCommandData, CommandInteraction } from 'discord.js';
-import { EventEmitter } from 'events';
 import { ParsingError } from './errors/ParsingError';
 
-export class TagParser extends EventEmitter {
+export class TagParser {
 	public parsingRegExp = /\{\{[^}]*\}\}/g;
 
 	public parseData(name: string, description: string, options: string, response: string) {
@@ -12,20 +10,19 @@ export class TagParser extends EventEmitter {
 				name,
 				description,
 				options: parsedOptions
-			} as ApplicationCommandData,
+			},
 			response
 		};
 	}
 
-	public parseResponse(response: string, interaction: CommandInteraction) {
-		if (!this.parsingRegExp.test(response)) return interaction.reply(response);
+	public parseResponse(response: string, interaction: any) {
+		if (!this.parsingRegExp.test(response)) return response;
 		response = response.replaceAll('}}', '');
-		// eslint-disable-next-line @typescript-eslint/no-base-to-string
-		response = response.replaceAll('{{member', `${interaction.member}`);
-		response = response.replaceAll('{{user', `${interaction.user}`);
-		response = response.replaceAll('{{channel', `${interaction.channel}`);
-		response = response.replaceAll('{{guild', `${interaction.guild}`);
-		return interaction.reply(response);
+		response = response.replaceAll('{{member', interaction.member);
+		response = response.replaceAll('{{user', interaction.user);
+		response = response.replaceAll('{{channel', interaction.channel);
+		response = response.replaceAll('{{guild', interaction.guild);
+		return response;
 	}
 
 	private parseOptions(options: string) {

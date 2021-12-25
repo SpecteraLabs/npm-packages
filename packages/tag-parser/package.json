@@ -1,45 +1,50 @@
 {
-	"name": "@spectera/tag-parser",
-	"version": "0.3.1",
-	"description": "Tag parsing library for discord tags",
-	"keywords": [],
-	"author": "undied",
-	"license": "Apache-2.0",
-	"packageManager": "yarn@3.1.1",
-	"exports": {
-		"require": "./bundled/index.cjs",
-		"import": "./bundled/index.mjs"
-	},
-	"homepage": "github.com/SpecteraLabs/tag-parser",
-	"repository": {
-		"type": "git",
-		"url": "github.com/SpecteraLabs/tag-parser"
-	},
-	"types": "./bundled/index.d.ts",
-	"scripts": {
-		"build": "node ./scripts/build.mjs",
-		"npm-publish": "yarn dev && npm publish",
-		"bundle": "rollup -c",
-		"clean": "node ./scripts/clean.mjs",
-		"bundle-types": "dts-bundle-generator --config=dts-bundler.config.js",
-		"build-types": "tsc --emitDeclarationOnly --outDir dist/types",
-		"dev": "yarn clean && yarn build && yarn build-types && yarn bundle && yarn bundle-types"
-	},
-	"prettier": "@sapphire/prettier-config",
-	"devDependencies": {
-		"@sapphire/eslint-config": "^4.0.8",
-		"@sapphire/prettier-config": "^1.2.7",
-		"@sapphire/ts-config": "^3.1.6",
-		"@typescript-eslint/eslint-plugin": "^5.6.0",
-		"@typescript-eslint/parser": "^5.6.0",
-		"discord-api-types": "^0.25.2",
-		"discord.js": "^13.3.1",
-		"dts-bundle-generator": "^6.2.0",
-		"esbuild": "0.14.2",
-		"eslint": "^8.4.1",
-		"prettier": "^2.5.1",
-		"rollup": "2.61.1",
-		"tslib": "2.3.1",
-		"typescript": "4.5.3"
-	}
+  "name": "@spectera/tag-parser",
+  "version": "0.3.1",
+  "description": "Tag parsing library for discord tags",
+  "keywords": [],
+  "author": "undied",
+  "license": "Apache-2.0",
+  "packageManager": "yarn@3.1.1",
+  "exports": {
+    "require": "./bundled/index.cjs",
+    "import": "./bundled/index.mjs"
+  },
+  "homepage": "github.com/SpecteraLabs/tag-parser",
+  "repository": {
+    "type": "git",
+    "url": "github.com/SpecteraLabs/tag-parser"
+  },
+  "types": "./bundled/types/index.d.ts",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "npm-publish": "yarn dev && npm publish",
+    "bundle": "rollup -c",
+    "clean": "node ./scripts/clean.mjs",
+    "bundle-types": "cp -r dist/types/ bundled/types/",
+    "build-types": "tsc --emitDeclarationOnly --outDir dist/types",
+    "dev": "yarn clean && yarn build && yarn build-types && yarn bundle && yarn bundle-types",
+    "test": "jest"
+  },
+  "prettier": "@sapphire/prettier-config",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-typescript": "^7.16.5",
+    "@sapphire/eslint-config": "^4.0.8",
+    "@sapphire/prettier-config": "^1.2.7",
+    "@sapphire/ts-config": "^3.1.6",
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "babel-jest": "^27.4.5",
+    "esbuild": "0.14.2",
+    "eslint": "^8.4.1",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "rollup": "2.61.1",
+    "ts-node": "^10.4.0",
+    "tslib": "2.3.1",
+    "typescript": "4.5.3"
+  }
 }
