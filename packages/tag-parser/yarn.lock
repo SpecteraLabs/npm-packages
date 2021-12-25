@@ -1684,7 +1684,7 @@ __metadata:
     "@sapphire/eslint-config": ^4.0.8
     "@sapphire/prettier-config": ^1.2.7
     "@sapphire/ts-config": ^3.1.6
-    "@types/jest": ^27.0.3
+    "@types/jest": 27.0.3
     "@typescript-eslint/eslint-plugin": ^5.6.0
     "@typescript-eslint/parser": ^5.6.0
     babel-jest: ^27.4.5
@@ -1809,7 +1809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^27.0.3":
+"@types/jest@npm:27.0.3":
   version: 27.0.3
   resolution: "@types/jest@npm:27.0.3"
   dependencies:
