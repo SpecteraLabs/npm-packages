@@ -4,8 +4,9 @@ export class TagParser {
 	public parsingRegExp = /\{\{[^}]*\}\}/g;
 	public optionTypes = ['string', 'number', 'boolean'];
 
-	public parseData(name: string, description: string, options: string, response: string) {
-		const parsedOptions = this.parseOptions(options);
+	public parseData(data: ParsableDataObject) {
+		const parsedOptions = data.options ? this.parseOptions(data.options) : [];
+		const { name, description, response } = data;
 		return {
 			data: {
 				name,
@@ -29,7 +30,7 @@ export class TagParser {
 		return replacer(response, interaction);
 	}
 
-	private parseOptions(options: string) {
+	protected parseOptions(options: string) {
 		if (!this.parsingRegExp.test(options))
 			throw new ParsingError({
 				message: 'Invalid options provided',
@@ -41,15 +42,23 @@ export class TagParser {
 			option = option.trim().replace('{{', '').replace('}}', '');
 			const optionDataButArray = option.split('|');
 			const name = optionDataButArray[0];
-			const description = optionDataButArray[1] ? optionDataButArray[1] : 'No description provided';
+			const description = optionDataButArray[1] ?? 'No description provided';
 			const type = optionDataButArray[2];
+			const required = optionDataButArray[3] ?? false;
 			if (!this.optionTypes.includes(type))
 				throw new ParsingError({
 					message: `OptionType should be 'string' or 'number' or 'boolean' but recieved '${type}'`,
 					identifier: 'unknown-type'
 				});
-			optionsArray.push({ name, description, type });
+			optionsArray.push({ name, description, type, required });
 		}
 		return optionsArray;
 	}
+}
+
+interface ParsableDataObject {
+	name: string;
+	description: string;
+	options?: string;
+	response: string;
 }

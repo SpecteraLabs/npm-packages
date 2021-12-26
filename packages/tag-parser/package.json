@@ -1,6 +1,6 @@
 {
   "name": "@spectera/tag-parser",
-  "version": "0.3.1",
+  "version": "2.1.1",
   "description": "Tag parsing library for discord tags",
   "keywords": [],
   "author": "undied",
@@ -20,10 +20,11 @@
     "build": "node ./scripts/build.mjs",
     "npm-publish": "yarn dev && npm publish",
     "bundle": "rollup -c",
+    "format": "prettier --write './src/**/*.ts'",
     "clean": "node ./scripts/clean.mjs",
     "bundle-types": "cp -r dist/types/ bundled/types/",
     "build-types": "tsc --emitDeclarationOnly --outDir dist/types",
-    "dev": "yarn clean && yarn build && yarn build-types && yarn bundle && yarn bundle-types",
+    "dev": "yarn format && yarn clean && yarn build && yarn build-types && yarn bundle && yarn bundle-types",
     "test": "jest"
   },
   "prettier": "@sapphire/prettier-config",
