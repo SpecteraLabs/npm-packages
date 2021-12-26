@@ -2,7 +2,7 @@ import { TagParser } from '../src';
 
 test('parse command data', () => {
 	const tagParser = new TagParser();
-	const data = tagParser.parseData('name', 'description', '{{unit|unit|unit}} {{test|test|test}}', 'res');
+	const data = tagParser.parseData('name', 'description', '{{unit|unit|string}} {{test|test|string}}', 'res');
 	expect(data).toEqual({
 		data: {
 			description: 'description',
@@ -11,12 +11,12 @@ test('parse command data', () => {
 				{
 					description: 'unit',
 					name: 'unit',
-					type: 'unit'
+					type: 'string'
 				},
 				{
 					description: 'test',
 					name: 'test',
-					type: 'test'
+					type: 'string'
 				}
 			]
 		},
