@@ -44,7 +44,7 @@ export class TagParser {
 			const name = optionDataButArray[0];
 			const description = optionDataButArray[1] ?? 'No description provided';
 			const type = optionDataButArray[2];
-			const required = optionDataButArray[3] ?? false;
+			const required = optionDataButArray[3] ? Boolean(optionDataButArray[3]) : false;
 			if (!this.optionTypes.includes(type))
 				throw new ParsingError({
 					message: `OptionType should be 'string' or 'number' or 'boolean' but recieved '${type}'`,
