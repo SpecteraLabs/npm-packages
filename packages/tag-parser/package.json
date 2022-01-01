@@ -1,10 +1,12 @@
 {
   "name": "@spectera/tag-parser",
-  "version": "2.1.2",
+  "version": "2.1.4",
   "description": "Tag parsing library for discord tags",
   "keywords": [],
   "author": "undied",
   "license": "Apache-2.0",
+  "main": "./bundled/index.cjs",
+  "module": "./bundled/index.mjs",
   "packageManager": "yarn@3.1.1",
   "exports": {
     "require": "./bundled/index.cjs",
