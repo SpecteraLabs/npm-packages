@@ -2,7 +2,7 @@
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
 		"allowJs": true,
-		"outDir": "./dist",
+		"outDir": "./.rollup.cache/dist",
 		"rootDir": "./src",
 		"baseUrl": "./src",
 		"composite": true,

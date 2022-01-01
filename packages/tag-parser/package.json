@@ -1,6 +1,6 @@
 {
   "name": "@spectera/tag-parser",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Tag parsing library for discord tags",
   "keywords": [],
   "author": "undied",
@@ -17,14 +17,13 @@
   },
   "types": "./bundled/types/index.d.ts",
   "scripts": {
-    "build": "node ./scripts/build.mjs",
     "npm-publish": "yarn dev && npm publish",
     "bundle": "rollup -c",
     "format": "prettier --write './src/**/*.ts'",
     "clean": "node ./scripts/clean.mjs",
-    "bundle-types": "cp -r dist/types/ bundled/types/",
-    "build-types": "tsc --emitDeclarationOnly --outDir dist/types",
-    "dev": "yarn format && yarn clean && yarn build && yarn build-types && yarn bundle && yarn bundle-types",
+    "bundle-types": "node ./scripts/bundle-types.mjs",
+    "build-types": "tsc --emitDeclarationOnly --outDir .rollup.cache/types",
+    "dev": "yarn format && yarn clean && yarn build-types && yarn bundle && yarn bundle-types",
     "test": "jest"
   },
   "prettier": "@sapphire/prettier-config",
@@ -32,6 +31,7 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-typescript": "^7.16.5",
+    "@rollup/plugin-typescript": "^8.3.0",
     "@sapphire/eslint-config": "^4.0.8",
     "@sapphire/prettier-config": "^1.2.7",
     "@sapphire/ts-config": "^3.1.6",

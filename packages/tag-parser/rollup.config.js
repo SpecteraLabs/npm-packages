@@ -1,8 +1,9 @@
 import { defineConfig } from 'rollup';
+import typescript from '@rollup/plugin-typescript';
 
 export default defineConfig([
 	{
-		input: 'dist/index.js',
+		input: 'src/index.ts',
 		output: [
 			{
 				file: 'bundled/index.cjs',
@@ -14,6 +15,7 @@ export default defineConfig([
 				format: 'esm',
 				sourcemap: true
 			}
-		]
+		],
+		plugins: [typescript()]
 	}
 ]);
