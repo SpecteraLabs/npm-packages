@@ -1,7 +1,7 @@
 import { defineConfig } from 'rollup';
 import typescript from '@rollup/plugin-typescript';
 
-export default defineConfig([
+export default defineConfig(
 	{
 		input: 'src/index.ts',
 		output: [
@@ -16,6 +16,9 @@ export default defineConfig([
 				sourcemap: true
 			}
 		],
-		plugins: [typescript()]
+		plugins: [typescript({
+			tsconfig: './tsconfig.json',
+			outputToFilesystem: false
+		})]
 	}
-]);
+);

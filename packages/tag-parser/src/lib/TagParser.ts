@@ -18,6 +18,11 @@ export class TagParser {
 	}
 
 	public parseResponse(response: string, interaction: any) {
+		// remove sensitive parts from interaction
+		const { client, ...int } = interaction;
+		int.random = (...params: string[]) => {
+			return params[Math.floor(Math.random() * params.length)];
+		};
 		if (!this.parsingRegExp.test(response)) return response;
 		response = response.replaceAll('{{', '${').replaceAll('}}', '}');
 		function replacer(template: string, obj: any) {
@@ -27,7 +32,8 @@ export class TagParser {
 			/* eslint-enable */
 			return func(...keys.map((k) => obj[k]));
 		}
-		return replacer(response, interaction);
+		const repl = replacer(response, int);
+		return replacer(repl, int);
 	}
 
 	protected parseOptions(options: string) {

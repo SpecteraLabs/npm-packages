@@ -2,11 +2,14 @@
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
 		"allowJs": true,
-		"outDir": "./.rollup.cache/dist",
-		"rootDir": "./src",
-		"baseUrl": "./src",
-		"composite": true,
-		"noUnusedLocals": false
+		"rootDir": "src",
+		"outDir": "bundled",
+		"incremental": true,
+		"noUnusedLocals": true,
+		"declaration": true,
+		"declarationMap": true,
+		"declarationDir": "."
 	},
-	"include": ["./src", "./src/**/*.json"],
+	"include": ["./src"],
+	"exclude": ["./bundled"]
 }

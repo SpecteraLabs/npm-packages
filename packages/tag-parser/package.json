@@ -23,9 +23,7 @@
     "bundle": "rollup -c",
     "format": "prettier --write './src/**/*.ts'",
     "clean": "node ./scripts/clean.mjs",
-    "bundle-types": "node ./scripts/bundle-types.mjs",
-    "build-types": "tsc --emitDeclarationOnly --outDir .rollup.cache/types",
-    "dev": "yarn format && yarn clean && yarn build-types && yarn bundle && yarn bundle-types",
+    "dev": "yarn format && yarn clean && yarn bundle",
     "test": "jest"
   },
   "prettier": "@sapphire/prettier-config",
