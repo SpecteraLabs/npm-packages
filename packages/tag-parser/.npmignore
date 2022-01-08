@@ -1,0 +1,17 @@
+node_modules
+dist
+src
+.yarn
+scripts
+tsconfig.json
+yarn.lock
+renovate.json
+tsconfig.*
+.*
+*.config.js
+*.config.ts
+tests/
+.rollup.cache
+.github
+*.md
+!README.md
