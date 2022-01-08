@@ -13,7 +13,7 @@ on:
       repository:
         description: The {owner}/{repository} that is being deployed.
         required: false
-        default: spectera/tag-parser
+        default: SpecteraLabs/tag-parser
   push:
     branches:
       - main
@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 # renovate: tag=v2
         with:
           fetch-depth: 0
-          repository: ${{ github.event.inputs.repository || 'spectera/tag-parser' }}
+          repository: ${{ github.event.inputs.repository || 'SpecteraLabs/tag-parser' }}
           ref: ${{ github.event.inputs.ref || 'main' }}
       - name: Add TypeScript problem matcher
         run: echo "::add-matcher::.github/problemMatchers/tsc.json"
