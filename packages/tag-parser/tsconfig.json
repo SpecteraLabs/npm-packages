@@ -3,12 +3,11 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"rootDir": "src",
-		"outDir": "bundled",
 		"incremental": true,
 		"noUnusedLocals": true,
-		"declaration": true,
-		"declarationMap": true,
-		"declarationDir": "."
+		"composite": false,
+		"declaration": false,
+		"declarationMap": false
 	},
 	"include": ["./src"],
 	"exclude": ["./bundled"]

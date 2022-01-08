@@ -1,6 +1,6 @@
 {
   "name": "@spectera/tag-parser",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "description": "Tag parsing library for discord tags",
   "keywords": [],
   "author": "undied",
@@ -17,10 +17,10 @@
     "type": "git",
     "url": "github.com/SpecteraLabs/tag-parser"
   },
-  "types": "./bundled/types/index.d.ts",
+  "types": "./bundled/index.d.ts",
   "scripts": {
     "npm-publish": "yarn dev && npm publish",
-    "bundle": "rollup -c",
+    "bundle": "rollup -c && dts-bundle-generator -o ./bundled/index.d.ts ./src/index.ts",
     "format": "prettier --write './src/**/*.ts'",
     "clean": "node ./scripts/clean.mjs",
     "dev": "yarn format && yarn clean && yarn bundle",
@@ -39,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
     "babel-jest": "^27.4.5",
+    "dts-bundle-generator": "^6.3.0",
     "esbuild": "0.14.8",
     "eslint": "^8.5.0",
     "jest": "^27.4.5",
