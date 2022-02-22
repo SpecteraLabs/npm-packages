@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "scripts": {
     "build": "tsup",
-    "watch": "tsup --watch"
+    "watch": "tsup --watch",
+    "prepublish": "yarn build"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +29,9 @@
     "prettier": "^2.5.1",
     "tsup": "^5.11.13",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@discordjs/collection": "^0.5.0",
+    "@sapphire/fetch": "^2.1.0"
   }
 }
