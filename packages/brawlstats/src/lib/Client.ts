@@ -1,17 +1,24 @@
-import { Brawlers } from './Brawlers';
+import { BrawlersMap } from './Brawlers';
+import { Logger, LoggerOptions } from './logger/Logger';
 
 export class Client {
 	#token!: string;
-	public brawlers!: Brawlers;
+	public brawlers!: BrawlersMap;
+	public options: ClientOptions;
+	public logger: Logger;
 
-	public async login(token: string) {
+	public constructor(options: ClientOptions) {
+		this.options = options;
+		this.logger = new Logger(this.options.logger!);
+	}
+
+	public async login(token: string = process.env.BRAWLSTARS_TOKEN as string) {
 		this.#token = token;
-		await this.#getBrawlers();
-		return this;
+		const res = new BrawlersMap(this.#token);
+		this.brawlers = await res.init();
 	}
+}
 
-	async #getBrawlers() {
-		const res = new Brawlers(this.#token);
-		this.brawlers = await res.login();
-	}
+interface ClientOptions {
+	logger?: LoggerOptions;
 }

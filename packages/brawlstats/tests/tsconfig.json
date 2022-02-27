@@ -1,0 +1,13 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"module": "esnext",
+		"noEmit": true,
+		"incremental": false,
+		"baseUrl": ".",
+		"moduleResolution": "node"
+	},
+	"include": [".", "../src/**/*"],
+	"exclude": ["../dist/**/*"],
+	"references": [{ "path": "../src" }]
+}

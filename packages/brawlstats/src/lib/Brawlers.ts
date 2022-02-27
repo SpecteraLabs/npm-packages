@@ -1,25 +1,25 @@
-import type { BrawlersInterface, Brawler } from './types/interfaces';
+import type { BrawlersInterface, BrawlerInterface, Brawlers } from './types';
 import { fetch, QueryError } from '@sapphire/fetch';
 import Collection from '@discordjs/collection';
 
-export class Brawlers extends Collection<string, Brawler> {
-	public all = new Set<Brawler>();
+export class BrawlersMap extends Collection<string, BrawlerInterface> {
+	#all = new Set<BrawlerInterface>();
 	#token: string;
-	public constructor(token: string) {
+	public constructor(token: string = process.env.BRAWLSTARS_TOKEN as string) {
 		super();
 		this.#token = token;
 	}
 
-	public async login() {
-		if (this.all.size) return this;
+	public async init() {
+		if (this.#all.size) return this;
 		await this.#getBrawlers();
-		for (const brawler of this.all) {
+		for (const brawler of this.#all) {
 			this.set(brawler.name, brawler);
 		}
 		return this;
 	}
 
-	public override get(key: string) {
+	public override get(key: string | Brawlers) {
 		if (typeof key === 'string') key = key.toUpperCase();
 		return super.get(key);
 	}
@@ -31,7 +31,7 @@ export class Brawlers extends Collection<string, Brawler> {
 					Authorization: `Bearer ${this.#token}`
 				}
 			});
-			this.all = new Set(res.items);
+			this.#all = new Set(res.items);
 		} catch (e) {
 			const error = e as QueryError;
 			// automate this later
