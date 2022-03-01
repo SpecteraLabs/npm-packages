@@ -1,6 +1,7 @@
 import type { BrawlersInterface, BrawlerInterface, Brawlers } from './types';
 import { fetch, QueryError } from '@sapphire/fetch';
 import Collection from '@discordjs/collection';
+import { BrawlAPIError } from './errors/BrawlAPIError';
 
 export class BrawlersMap extends Collection<string, BrawlerInterface> {
 	#all = new Set<BrawlerInterface>();
@@ -33,10 +34,12 @@ export class BrawlersMap extends Collection<string, BrawlerInterface> {
 			});
 			this.#all = new Set(res.items);
 		} catch (e) {
-			const error = e as QueryError;
-			// automate this later
-			if (error.code === 403 && error.toJSON().reason === 'accessDenied.invalidIp')
-				throw new Error('You are fetching from an Invalid IP Address');
+			const err = e as QueryError;
+			throw new BrawlAPIError({
+				code: err.code,
+				message: err.toJSON().message,
+				reason: err.toJSON().reason
+			});
 		}
 	}
 }

@@ -1,4 +1,6 @@
-function shallowEqual(object1: ObjectType, object2: ObjectType) {
+import type { QueryError } from '@sapphire/fetch';
+
+export function shallowEqual(object1: ObjectType, object2: ObjectType) {
 	const keys1 = Object.keys(object1);
 	const keys2 = Object.keys(object2);
 	if (keys1.length !== keys2.length) {
@@ -10,6 +12,10 @@ function shallowEqual(object1: ObjectType, object2: ObjectType) {
 		}
 	}
 	return true;
+}
+
+export function preParseError(e: QueryError) {
+	throw new Error(e.message);
 }
 
 interface ObjectType {
