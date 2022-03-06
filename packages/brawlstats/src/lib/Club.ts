@@ -1,8 +1,8 @@
 import { Base } from './Base';
-import type { IClub, MembersEntity } from './types';
+import type { IClub } from './types';
 import { from } from './utils';
 
-export class Club extends Base implements IClub {
+export class Club extends Base {
 	public tag!: string;
 	public name!: string;
 	public description!: string;
@@ -10,9 +10,8 @@ export class Club extends Base implements IClub {
 	public badgeId!: number;
 	public requiredTrophies!: number;
 	public trophies!: number;
-	public members?: MembersEntity[] | null | undefined;
 
-	public constructor(data: IClub) {
+	public constructor(data: Omit<IClub, 'members'>) {
 		super('clubs');
 		Object.assign(this, data);
 	}
@@ -21,7 +20,8 @@ export class Club extends Base implements IClub {
 		const base = new Base('clubs');
 		return from(async () => {
 			const data = await base.request<IClub>(`${tag}`, token);
-			return new Club(data);
+			const { members, ...res } = data;
+			return new Club(res);
 		});
 	}
 }

@@ -9,5 +9,5 @@ test('Test if a brawler is fetched', async () => {
 		}
 	});
 	const brawlers = await client.getBrawlers();
-	expect(brawlers.get(Brawlers.SHELLY)).toEqual(brawlers.get('Shelly'));
+	expect(brawlers.get(Brawlers.SHELLY)).toEqual(brawlers.get('SHELLY'));
 });
