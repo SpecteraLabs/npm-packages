@@ -1,9 +1,52 @@
+import type { Events, LogLevel } from './enums';
+
 export interface BrawlerInterface {
 	id: number;
 	name: string;
 	starPowers?: StarPowersEntityOrGadgetsEntity[] | null;
 	gadgets?: StarPowersEntityOrGadgetsEntity[] | null;
 }
+
+export interface IClub {
+	tag: string;
+	name: string;
+	description: string;
+	type: string;
+	badgeId: number;
+	requiredTrophies: number;
+	trophies: number;
+	members?: MembersEntity[] | null;
+}
+export interface MembersEntity {
+	tag: string;
+	name: string;
+	nameColor: string;
+	role: string;
+	trophies: number;
+	icon: Icon;
+}
+export interface Icon {
+	id: number;
+}
+
+export interface PlayerBrawler {
+	id: number;
+	name: string;
+	power: number;
+	rank: number;
+	trophies: number;
+	highestTrophies: number;
+	gears?: Gears[];
+	starPowers?: StarPowersEntityOrGadgetsEntity[];
+	gadgets?: StarPowersEntityOrGadgetsEntity[];
+}
+
+export interface Gears {
+	id: number;
+	name: 'SHIELD' | 'SPEED' | 'HEALTH' | 'DAMAGE' | 'RESISTANCE';
+	level: 1 | 2 | 3;
+}
+
 export interface StarPowersEntityOrGadgetsEntity {
 	id: number;
 	name: string;
@@ -21,9 +64,15 @@ export interface ItemsEntity {
 	event: Event;
 	battle: Battle;
 }
+
+export interface IEvent {
+	startTime: string;
+	endTime: string;
+	event: Event;
+}
 export interface Event {
 	id: number;
-	mode?: string | null;
+	mode?: keyof typeof Events | string;
 	map?: string | null;
 }
 export interface Battle {
@@ -57,22 +106,6 @@ export interface Paging {
 	cursors: Cursors;
 }
 export interface Cursors {}
-
-export const enum LogLevel {
-	Trace = 10,
-
-	Debug = 20,
-
-	Info = 30,
-
-	Warn = 40,
-
-	Error = 50,
-
-	Fatal = 60,
-
-	None = 100
-}
 
 export interface ILogger {
 	has(level: LogLevel): boolean;

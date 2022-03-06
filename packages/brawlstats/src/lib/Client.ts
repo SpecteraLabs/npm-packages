@@ -1,4 +1,6 @@
 import { BrawlersMap } from './Brawlers';
+import { Club } from './Club';
+import { Event } from './Events';
 import { Logger, LoggerOptions } from './logger/Logger';
 import { Player } from './Player';
 
@@ -21,6 +23,15 @@ export class Client {
 	public async getBrawlers() {
 		const res = new BrawlersMap(this.#token);
 		return res.init();
+	}
+
+	public async getClub(tag: string) {
+		tag = tag.replace('#', '%23');
+		return Club.getClub(tag, this.#token);
+	}
+
+	public async getRotation() {
+		return Event.getRotation(this.#token);
 	}
 }
 

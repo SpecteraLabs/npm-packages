@@ -7,7 +7,7 @@ export class BrawlAPIError extends Error {
 				options.message = 'Invalid API key provided';
 				break;
 			case 'accessDenied.invalidIp':
-				options.message = 'API key does not allow access from IP 103.120.51.240';
+				options.message = `API key does not allow access from IP ${options.message.split('IP ')[1]}`;
 				break;
 		}
 		super(options.message);

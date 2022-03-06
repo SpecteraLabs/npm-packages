@@ -1,9 +1,9 @@
-import type { BrawlersInterface, BrawlerInterface, Brawlers } from './types';
+import type { BrawlersInterface, BrawlerInterface, Brawlers, PlayerBrawler } from './types';
 import { fetch } from '@sapphire/fetch';
 import Collection from '@discordjs/collection';
 import { from } from './utils';
 
-export class BrawlersMap extends Collection<string, BrawlerInterface> {
+export class BrawlersMap<K = BrawlerInterface> extends Collection<string, K | BrawlerInterface> {
 	#all = new Set<BrawlerInterface>();
 	#token: string;
 	public constructor(token: string = process.env.BRAWLSTARS_TOKEN as string) {
@@ -20,9 +20,8 @@ export class BrawlersMap extends Collection<string, BrawlerInterface> {
 		return this;
 	}
 
-	public override get(key: string | Brawlers) {
-		if (typeof key === 'string') key = key.toUpperCase();
-		return super.get(key);
+	public override get(key: Brawlers | keyof typeof Brawlers): K {
+		return super.get(key) as unknown as K;
 	}
 
 	async #getBrawlers() {
@@ -34,5 +33,13 @@ export class BrawlersMap extends Collection<string, BrawlerInterface> {
 			});
 			this.#all = new Set(res.items);
 		});
+	}
+
+	public static construct(data: PlayerBrawler[]) {
+		const brawlers = new BrawlersMap<PlayerBrawler>();
+		for (const brawler of data) {
+			brawlers.set(brawler.name, brawler);
+		}
+		return brawlers;
 	}
 }

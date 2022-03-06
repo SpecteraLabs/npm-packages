@@ -15,7 +15,7 @@ export function shallowEqual(object1: ObjectType, object2: ObjectType) {
 	return true;
 }
 
-export async function from<T>(promiseOrCb: Awaitable<T> | ((...args: unknown[]) => Awaitable<T>)): Promise<unknown> {
+export async function from<T>(promiseOrCb: Awaitable<T> | ((...args: unknown[]) => Awaitable<T>)): Promise<T> {
 	try {
 		return await (isFunction(promiseOrCb) ? promiseOrCb() : promiseOrCb);
 	} catch (e) {
@@ -26,6 +26,16 @@ export async function from<T>(promiseOrCb: Awaitable<T> | ((...args: unknown[]) 
 			reason: error.toJSON().reason
 		});
 	}
+}
+
+export function dateFromBrawlStars(value: string) {
+	return new Date(
+		Number(value.substring(0, 4)),
+		Number(value.substring(4, 6)) - 1,
+		Number(value.substring(6, 8)),
+		Number(value.substring(9, 11)),
+		Number(value.substring(11, 13))
+	).toUTCString();
 }
 
 // eslint-disable-next-line @typescript-eslint/ban-types
