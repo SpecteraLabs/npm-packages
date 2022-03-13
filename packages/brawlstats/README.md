@@ -31,17 +31,7 @@ const client = new Client({
 	 * Your Brawl Stars API key.
 	 * @defaults to the environment variable `BRAWLSTATS_TOKEN`
 	*/
-	token: 'your-api-key',
-	/**
-	 * A fancy logger which we provide, 
-	 * provides methods such as `info`, `warn`, `error` and `debug`.
-	*/
-	logger: {
-		/**
-		 * The minimum log level.
-		*/
-		level: LogLevel.Debug,
-	}
+	token: 'your-api-key'
 })
 
 // get a player
@@ -62,17 +52,7 @@ const client = new Client({
 	 * Your Brawl Stars API key.
 	 * @defaults to the environment variable `BRAWLSTATS_TOKEN`
 	*/
-	token: 'your-api-key',
-	/**
-	 * A fancy logger which we provide, 
-	 * provides methods such as `info`, `warn`, `error` and `debug`.
-	*/
-	logger: {
-		/**
-		 * The minimum log level.
-		*/
-		level: LogLevel.Debug,
-	}
+	token: 'your-api-key'
 })
 
 (async () => {
