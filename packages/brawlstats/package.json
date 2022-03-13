@@ -20,6 +20,9 @@
 		"postinstall": "husky install",
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable",
+		"sversion": "standard-version",
+		"commit": "git-cz",
+		"cz": "git-cz",
 		"watch": "tsup --watch",
 		"prepublish": "yarn build"
 	},
@@ -59,6 +62,7 @@
 		"jest": "27.5.1",
 		"pinst": "3.0.0",
 		"prettier": "2.5.1",
+		"standard-version": "^9.3.2",
 		"tsup": "5.12.1",
 		"typescript": "4.6.2"
 	},
