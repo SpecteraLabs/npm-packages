@@ -4,10 +4,7 @@ about: Report a bug caught in the package
 title: ''
 labels: bug
 assignees: ''
-
----
-
-- type: input
+ - type: input
     attributes:
       label: Overview
       description: A summary of the bug
@@ -67,3 +64,4 @@ assignees: ''
     attributes:
       label: Additional information
       description: Is there anything else you would like to say? Please do so here!
+---
