@@ -46,6 +46,6 @@ jobs:
           # Bump the version
           yarn standard-version --skip.commit --skip.tag --prerelease "${TAG}.$(git rev-parse --verify --short HEAD)"
           # Publish to NPM
-          npm publish --tag ${TAG} || true
+          yarn npm publish --tag ${TAG} --otp ${{ secrets.NPM_PUBLISH_TOKEN }} || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
