@@ -1,4 +1,3 @@
----
 name: Bug report
 about: Report a bug caught in the package
 title: ''
@@ -64,4 +63,3 @@ assignees: ''
     attributes:
       label: Additional information
       description: Is there anything else you would like to say? Please do so here!
----
