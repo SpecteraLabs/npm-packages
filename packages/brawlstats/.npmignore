@@ -5,6 +5,7 @@ node_modules
 tsconfig.*
 yarn.lock
 *.ts
+!*.d.ts
 renovate.json
 .github
 *.config.*js

@@ -1,4 +1,4 @@
-import type { Events, LogLevel } from './enums';
+import type { Events } from './enums';
 
 export interface BrawlerInterface {
 	id: number;
@@ -106,21 +106,3 @@ export interface Paging {
 	cursors: Cursors;
 }
 export interface Cursors {}
-
-export interface ILogger {
-	has(level: LogLevel): boolean;
-
-	trace(...values: readonly unknown[]): void;
-
-	debug(...values: readonly unknown[]): void;
-
-	info(...values: readonly unknown[]): void;
-
-	warn(...values: readonly unknown[]): void;
-
-	error(...values: readonly unknown[]): void;
-
-	fatal(...values: readonly unknown[]): void;
-
-	write(level: LogLevel, ...values: readonly unknown[]): void;
-}

@@ -55,22 +55,6 @@ export const enum Brawlers {
 	FANG = 'FANG'
 }
 
-export const enum LogLevel {
-	Trace = 10,
-
-	Debug = 20,
-
-	Info = 30,
-
-	Warn = 40,
-
-	Error = 50,
-
-	Fatal = 60,
-
-	None = 100
-}
-
 export const enum Events {
 	GemGrab = 'GemGrab',
 	SoloShowdown = 'SoloShowdown',
