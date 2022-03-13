@@ -1,8 +1,6 @@
 name: Bug report
-about: Report a bug caught in the package
-title: ''
+description: Report a bug caught in the package
 labels: bug
-assignees: ''
 body: 
   - type: input
     attributes:
