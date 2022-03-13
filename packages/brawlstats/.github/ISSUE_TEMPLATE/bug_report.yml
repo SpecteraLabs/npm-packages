@@ -3,7 +3,8 @@ about: Report a bug caught in the package
 title: ''
 labels: bug
 assignees: ''
- - type: input
+body: 
+  - type: input
     attributes:
       label: Overview
       description: A summary of the bug
