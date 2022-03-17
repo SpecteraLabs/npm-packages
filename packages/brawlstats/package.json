@@ -21,6 +21,7 @@
 		"prepack": "pinst --disable",
 		"postpack": "pinst --enable",
 		"sversion": "standard-version",
+		"prepublishOnly": "yarn build",
 		"commit": "git-cz",
 		"cz": "git-cz",
 		"watch": "tsup --watch",
