@@ -19,30 +19,24 @@
   },
   "types": "./bundled/index.d.ts",
   "scripts": {
-    "npm-publish": "yarn dev && npm publish",
-    "bundle": "rollup -c && dts-bundle-generator -o ./bundled/index.d.ts ./src/index.ts",
+    "prepublishOnly": "yarn dev",
+    "build": "tsup",
     "format": "prettier --write './src/**/*.ts'",
     "clean": "node ./scripts/clean.mjs",
-    "dev": "yarn format && yarn clean && yarn bundle",
+    "dev": "yarn format && yarn clean && yarn build",
     "test": "jest"
   },
   "prettier": "@sapphire/prettier-config",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.3.0",
     "@sapphire/eslint-config": "^4.0.8",
     "@sapphire/prettier-config": "^1.2.7",
     "@sapphire/ts-config": "^3.1.6",
     "@types/jest": "27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.8.0",
     "@typescript-eslint/parser": "^5.8.0",
-    "dts-bundle-generator": "^6.3.0",
-    "esbuild": "0.14.8",
     "eslint": "^8.5.0",
-    "jest": "^27.4.5",
     "prettier": "^2.5.1",
-    "rollup": "2.62.0",
     "standard-version": "^9.3.2",
-    "tslib": "2.3.1",
-    "typescript": "4.5.4"
+    "tslib": "2.3.1"
   }
 }

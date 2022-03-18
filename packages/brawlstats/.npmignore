@@ -10,3 +10,4 @@ renovate.json
 .github
 *.config.*js
 /index.js
+.turbo

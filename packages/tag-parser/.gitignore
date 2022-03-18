@@ -4,3 +4,4 @@ dist
 bundled
 .rollup.cache
 *.buildinfo*
+.turbo
