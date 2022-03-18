@@ -2,5 +2,27 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0"
+  "version": "independent",
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "push": true,
+      "ignoreChanges": [
+        "**/*.md",
+        "**/tests/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.turbo/**",
+        "**/.gitignore",
+        "**/tsup.config.ts",
+        "**/jest.config.ts",
+        "**/*.d.ts",
+        "**/packages/tag-parser/**/tsconfig.json",
+        "**/packages/brawlstats/**/tsconfig.json",
+        "**/packages/**/tsconfig.eslint.json"
+      ]
+    }
+  }
 }
