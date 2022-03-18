@@ -22,6 +22,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * initialise tests ([97ebc6e](github.com/SpecteraLabs/tag-parser/commits/97ebc6e92d22816decd074233c686b97a12e9fc0))
 * need to do some tests later doe ([4d6bc88](github.com/SpecteraLabs/tag-parser/commits/4d6bc883b1af90e872cab4dd531401f1b7ed4f83))
 * partial rewrite ([a7e626c](github.com/SpecteraLabs/tag-parser/commits/a7e626c089dea2f139b3abee19289435a6262299))
-* publis 0.2.0 to npm ([d15b565](github.com/SpecteraLabs/tag-parser/commits/d15b5656018249793502c42a6122c22a3e8fa92d))
+* publish 0.2.0 to npm ([d15b565](github.com/SpecteraLabs/tag-parser/commits/d15b5656018249793502c42a6122c22a3e8fa92d))
 * publish to npm ([2b6fa8c](github.com/SpecteraLabs/tag-parser/commits/2b6fa8c660268670aaab3701147cc7dc07a8cb84))
 * ready for npm publish ([c6f007d](github.com/SpecteraLabs/tag-parser/commits/c6f007d93c944f130559abb2913d7972af7b657d))
