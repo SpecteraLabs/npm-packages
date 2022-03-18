@@ -400,25 +400,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:16.2.1":
-  version: 16.2.1
-  resolution: "@commitlint/cli@npm:16.2.1"
-  dependencies:
-    "@commitlint/format": ^16.2.1
-    "@commitlint/lint": ^16.2.1
-    "@commitlint/load": ^16.2.1
-    "@commitlint/read": ^16.2.1
-    "@commitlint/types": ^16.2.1
-    lodash: ^4.17.19
-    resolve-from: 5.0.0
-    resolve-global: 1.0.0
-    yargs: ^17.0.0
-  bin:
-    commitlint: cli.js
-  checksum: da673e8e037f74b1a4257884d8f55fd6bfaf575283aa15b48a787090d3b81bdb49c8daa92aaa93208e1c026296c451e9d697d53380ea93a1a5c110a10e5794d0
-  languageName: node
-  linkType: hard
-
 "@commitlint/cli@npm:^16.2.3":
   version: 16.2.3
   resolution: "@commitlint/cli@npm:16.2.3"
@@ -438,37 +419,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-angular-type-enum@npm:^16.2.1":
-  version: 16.2.1
-  resolution: "@commitlint/config-angular-type-enum@npm:16.2.1"
-  checksum: 15749f4b5143501ffbfc6730bcc283e1398f5b2b83b3d1380892fdf897f9e32239aadc65ff8ea4af303c95da4069c9691c6987cb927687aafa490ef75b17954d
-  languageName: node
-  linkType: hard
-
-"@commitlint/config-angular@npm:16.2.1":
-  version: 16.2.1
-  resolution: "@commitlint/config-angular@npm:16.2.1"
-  dependencies:
-    "@commitlint/config-angular-type-enum": ^16.2.1
-  checksum: 88a818fd0e9d20c19d6c21949b03f6568b3e313b23a7f5f4ea351d669092157acbc3a99f7538f70a85a36f5bcbb7b7dcf119c59bd7cec4d31a698646cadbb63a
-  languageName: node
-  linkType: hard
-
-"@commitlint/config-angular@npm:^16.2.3":
-  version: 16.2.3
-  resolution: "@commitlint/config-angular@npm:16.2.3"
-  dependencies:
-    "@commitlint/config-angular-type-enum": ^16.2.1
-  checksum: 8a54fa231781d9bb7aedac67386567e84516d588844e5576271f947b346507278732246d7c7df08db343b4f373ed7af07450d4c11eb8e9645b6949f8a81979f7
-  languageName: node
-  linkType: hard
-
-"@commitlint/config-conventional@npm:16.2.1, @commitlint/config-conventional@npm:^16.2.1":
+"@commitlint/config-conventional@npm:^16.2.1":
   version: 16.2.1
   resolution: "@commitlint/config-conventional@npm:16.2.1"
   dependencies:
     conventional-changelog-conventionalcommits: ^4.3.1
   checksum: 23dac76a8fbe5624433e1c948bc53eaf0a60b77f418fe7f94eea8e17abf9605d7ae9418188d8c1a38c2e6d5cb865c8e2d0894826c3eb41fb052af95e79bc02d3
+  languageName: node
+  linkType: hard
+
+"@commitlint/config-lerna-scopes@npm:^16.2.2":
+  version: 16.2.2
+  resolution: "@commitlint/config-lerna-scopes@npm:16.2.2"
+  dependencies:
+    globby: ^11.0.1
+    import-from: 4.0.0
+    resolve-pkg: 2.0.0
+    semver: 7.3.5
+  peerDependencies:
+    lerna: ^3.0.0 || ^4.0.0
+  peerDependenciesMeta:
+    lerna:
+      optional: true
+  checksum: a4051a6f224c9a275eb8f8fd7f5077f251351328567ee45d7314fdcf87020b3f68cad8c4c33c9b221ee9dd97781c438a7e954ad0abb2d30d74558c239c99b00e
   languageName: node
   linkType: hard
 
@@ -531,7 +504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:>6.1.1, @commitlint/load@npm:^16.2.1, @commitlint/load@npm:^16.2.3":
+"@commitlint/load@npm:>6.1.1, @commitlint/load@npm:^16.2.3":
   version: 16.2.3
   resolution: "@commitlint/load@npm:16.2.3"
   dependencies:
@@ -1986,7 +1959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/eslint-config@npm:4.3.0, @sapphire/eslint-config@npm:^4.0.8":
+"@sapphire/eslint-config@npm:4.3.0":
   version: 4.3.0
   resolution: "@sapphire/eslint-config@npm:4.3.0"
   dependencies:
@@ -2010,7 +1983,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/prettier-config@npm:1.4.0, @sapphire/prettier-config@npm:^1.2.7":
+"@sapphire/prettier-config@npm:1.4.0":
   version: 1.4.0
   resolution: "@sapphire/prettier-config@npm:1.4.0"
   dependencies:
@@ -2019,7 +1992,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sapphire/ts-config@npm:3.3.2, @sapphire/ts-config@npm:^3.1.6":
+"@sapphire/ts-config@npm:3.3.2":
   version: 3.3.2
   resolution: "@sapphire/ts-config@npm:3.3.2"
   dependencies:
@@ -2050,18 +2023,6 @@ __metadata:
 "@spectera/tag-parser@workspace:packages/tag-parser":
   version: 0.0.0-use.local
   resolution: "@spectera/tag-parser@workspace:packages/tag-parser"
-  dependencies:
-    "@sapphire/eslint-config": ^4.0.8
-    "@sapphire/prettier-config": ^1.2.7
-    "@sapphire/ts-config": ^3.1.6
-    "@types/jest": 27.0.3
-    "@typescript-eslint/eslint-plugin": ^5.8.0
-    "@typescript-eslint/parser": ^5.8.0
-    eslint: ^8.5.0
-    prettier: ^2.5.1
-    standard-version: ^9.3.2
-    tslib: 2.3.1
-    typescript: 4.5.4
   languageName: unknown
   linkType: soft
 
@@ -2179,16 +2140,6 @@ __metadata:
   dependencies:
     "@types/istanbul-lib-report": "*"
   checksum: f1ad54bc68f37f60b30c7915886b92f86b847033e597f9b34f2415acdbe5ed742fa559a0a40050d74cdba3b6a63c342cac1f3a64dba5b68b66a6941f4abd7903
-  languageName: node
-  linkType: hard
-
-"@types/jest@npm:27.0.3":
-  version: 27.0.3
-  resolution: "@types/jest@npm:27.0.3"
-  dependencies:
-    jest-diff: ^27.0.0
-    pretty-format: ^27.0.0
-  checksum: 3683a9945821966f6dccddf337219a5d682633687c9d30df859223db553589f63e9b2c34e69f0cc845c86ffcf115742f25c12ea03c8d33d2244890fdc0af61e2
   languageName: node
   linkType: hard
 
@@ -2883,23 +2834,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "brawlstats@workspace:packages/brawlstats"
   dependencies:
-    "@commitlint/cli": 16.2.1
-    "@commitlint/config-angular": 16.2.1
-    "@commitlint/config-conventional": 16.2.1
-    "@commitlint/parse": ^16.2.1
     "@discordjs/collection": ^0.5.0
-    "@sapphire/eslint-config": 4.3.0
     "@sapphire/fetch": ^2.3.0
-    "@sapphire/prettier-config": 1.4.0
-    "@sapphire/ts-config": 3.3.2
-    "@types/jest": ^27.4.1
-    "@types/node": 17.0.18
     colorette: ^2.0.16
-    dotenv: 16.0.0
-    eslint: 8.11.0
-    prettier: 2.5.1
-    standard-version: ^9.3.2
-    typescript: 4.6.2
   languageName: unknown
   linkType: soft
 
@@ -4504,7 +4441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.11.0, eslint@npm:^8.10.0, eslint@npm:^8.5.0":
+"eslint@npm:^8.10.0, eslint@npm:^8.5.0":
   version: 8.11.0
   resolution: "eslint@npm:8.11.0"
   dependencies:
@@ -5294,7 +5231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.0.2, globby@npm:^11.0.3, globby@npm:^11.0.4":
+"globby@npm:^11.0.1, globby@npm:^11.0.2, globby@npm:^11.0.3, globby@npm:^11.0.4":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -5567,6 +5504,13 @@ __metadata:
     parent-module: ^1.0.0
     resolve-from: ^4.0.0
   checksum: 2cacfad06e652b1edc50be650f7ec3be08c5e5a6f6d12d035c440a42a8cc028e60a5b99ca08a77ab4d6b1346da7d971915828f33cdab730d3d42f08242d09baa
+  languageName: node
+  linkType: hard
+
+"import-from@npm:4.0.0":
+  version: 4.0.0
+  resolution: "import-from@npm:4.0.0"
+  checksum: 1fa29c05b048da18914e91d9a529e5d9b91774bebbfab10e53f59bcc1667917672b971cf102fee857f142e5e433ce69fa1f0a596e1c7d82f9947a5ec352694b9
   languageName: node
   linkType: hard
 
@@ -6165,7 +6109,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^27.0.0, jest-diff@npm:^27.5.1":
+"jest-diff@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-diff@npm:27.5.1"
   dependencies:
@@ -8291,15 +8235,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
-  languageName: node
-  linkType: hard
-
 "prettier@npm:^2.5.1":
   version: 2.6.0
   resolution: "prettier@npm:2.6.0"
@@ -8705,6 +8640,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resolve-pkg@npm:2.0.0":
+  version: 2.0.0
+  resolution: "resolve-pkg@npm:2.0.0"
+  dependencies:
+    resolve-from: ^5.0.0
+  checksum: 4a14cc38effed20ff362c8f377719af9a45ebe27ee07d79d4802b4568858cd96033f4edc3a2add7fd27e361d24101a042047297a9ef9476696ba16b72e0a05fc
+  languageName: node
+  linkType: hard
+
 "resolve.exports@npm:^1.1.0":
   version: 1.1.0
   resolution: "resolve.exports@npm:1.1.0"
@@ -8813,13 +8757,25 @@ __metadata:
   resolution: "root@workspace:."
   dependencies:
     "@commitlint/cli": ^16.2.3
-    "@commitlint/config-angular": ^16.2.3
     "@commitlint/config-conventional": ^16.2.1
+    "@commitlint/config-lerna-scopes": ^16.2.2
     "@commitlint/parse": ^16.2.1
+    "@sapphire/eslint-config": 4.3.0
+    "@sapphire/prettier-config": 1.4.0
+    "@sapphire/ts-config": 3.3.2
+    "@types/jest": ^27.4.1
+    "@types/node": 17.0.18
+    "@typescript-eslint/eslint-plugin": ^5.8.0
+    "@typescript-eslint/parser": ^5.8.0
     cz-conventional-changelog: ^3.3.0
+    dotenv: 16.0.0
+    eslint: ^8.5.0
     husky: ^7.0.4
     jest: ^27.5.1
     lerna: ^4.0.0
+    prettier: ^2.5.1
+    standard-version: ^9.3.2
+    tslib: 2.3.1
     tsup: ^5.12.1
     turbo: ^1.1.6
     typescript: ^4.6.2
@@ -10004,17 +9960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.5.4":
-  version: 4.5.4
-  resolution: "typescript@npm:4.5.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 59f3243f9cd6fe3161e6150ff6bf795fc843b4234a655dbd938a310515e0d61afd1ac942799e7415e4334255e41c2c49b7dd5d9fd38a17acd25a6779ca7e0961
-  languageName: node
-  linkType: hard
-
-"typescript@npm:4.6.2, typescript@npm:^4.4.3, typescript@npm:^4.6.2":
+"typescript@npm:^4.4.3, typescript@npm:^4.6.2":
   version: 4.6.2
   resolution: "typescript@npm:4.6.2"
   bin:
@@ -10024,17 +9970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.5.4#~builtin<compat/typescript>":
-  version: 4.5.4
-  resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=bda367"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: eda87927f9cfb94aca9b5e47842daf37347ad3073133e17f556fbb6c18f3493c5b551eedab0f4b26774235ddb7acbe0087250d5285f72ce6819a0891dd5a74ed
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@4.6.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
   version: 4.6.2
   resolution: "typescript@patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"
   bin:
