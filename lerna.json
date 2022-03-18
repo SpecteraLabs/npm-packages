@@ -22,7 +22,22 @@
         "**/packages/tag-parser/**/tsconfig.json",
         "**/packages/brawlstats/**/tsconfig.json",
         "**/packages/**/tsconfig.eslint.json"
-      ]
+      ],
+      "version": {
+        "allowBranch": "main",
+        "conventionalCommits": true,
+        "push": true,
+        "createRelease": "github",
+        "message": "chore(release): publish packages"
+      },
+      "create": {
+        "license": "MIT",
+        "keywords": [
+          "ts",
+          "typescript",
+          "yarn"
+        ]
+      }
     }
   }
 }
