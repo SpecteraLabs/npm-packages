@@ -1800,19 +1800,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/axios@npm:^0.0.7":
-  version: 0.0.7
-  resolution: "@nestjs/axios@npm:0.0.7"
-  dependencies:
-    axios: 0.26.0
-  peerDependencies:
-    "@nestjs/common": ^7.0.0 || ^8.0.0
-    reflect-metadata: ^0.1.12
-    rxjs: ^6.0.0 || ^7.0.0
-  checksum: e07a6606f1f4ad6d19e2c39531b29e16cb8d10a68dcf6c4d2204eb6d27c15f7aba5c2d43062e0d019fa06c6c79061e14bcafc3080b39862e1e87932162049982
-  languageName: node
-  linkType: hard
-
 "@nestjs/cli@npm:^8.0.0":
   version: 8.2.4
   resolution: "@nestjs/cli@npm:8.2.4"
@@ -3307,15 +3294,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:0.26.0":
-  version: 0.26.0
-  resolution: "axios@npm:0.26.0"
-  dependencies:
-    follow-redirects: ^1.14.8
-  checksum: d7a8b898f4157bedeb2e06c03b16133b91b354c041205bea732ce58b7a21f373d22057b0eea0d482838145ce6ff482b359750d9bcb8dd19d45e3928e3c65c280
-  languageName: node
-  linkType: hard
-
 "axios@npm:0.26.1":
   version: 0.26.1
   resolution: "axios@npm:0.26.1"
@@ -3473,7 +3451,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "brawl-api@workspace:packages/brawl-api"
   dependencies:
-    "@nestjs/axios": ^0.0.7
     "@nestjs/cli": ^8.0.0
     "@nestjs/common": ^8.0.0
     "@nestjs/core": ^8.0.0
