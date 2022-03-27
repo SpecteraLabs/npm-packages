@@ -37,6 +37,10 @@
           "typescript",
           "yarn"
         ]
+      },
+      "bootstrap": {
+        "ignore": "component-*",
+        "npmClientArgs": [""]
       }
     }
   }
