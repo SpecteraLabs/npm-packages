@@ -4,6 +4,7 @@
   "private": true,
   "description": "A cli wrapper around brawlstats",
   "author": "@undied",
+  "type": "module",
   "homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlcli#readme",
   "license": "MIT",
   "main": "dist/cli.js",

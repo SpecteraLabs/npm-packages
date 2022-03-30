@@ -19,6 +19,6 @@ brawlstats
 	.alias('fp')
 	.argument('<tag>', 'the tag of the player')
 	.action((tag: string) => {
-		// do nothing for now
+		// TODO
 		console.log(tag);
 	});
