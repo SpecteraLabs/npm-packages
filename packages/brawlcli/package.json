@@ -1,6 +1,7 @@
 {
   "name": "@brawlstats/brawlcli",
   "version": "0.0.1",
+  "private": "true",
   "description": "A cli wrapper around brawlstats",
   "author": "@undied",
   "homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlcli#readme",
