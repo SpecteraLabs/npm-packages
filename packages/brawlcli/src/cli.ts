@@ -13,4 +13,12 @@ brawlstats //
 	.name('brawlstats')
 	.version(version);
 
-// TODO
+brawlstats
+	.command('player')
+	.description('Get info of a player via their tag')
+	.alias('fp')
+	.argument('<tag>', 'the tag of the player')
+	.action((tag: string) => {
+		// do nothing for now
+		console.log(tag);
+	});

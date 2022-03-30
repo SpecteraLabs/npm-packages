@@ -400,9 +400,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@brawlstats/brawlcli@workspace:packages/brawlcli":
+"@brawlstats/cli@workspace:packages/brawlcli":
   version: 0.0.0-use.local
-  resolution: "@brawlstats/brawlcli@workspace:packages/brawlcli"
+  resolution: "@brawlstats/cli@workspace:packages/brawlcli"
   dependencies:
     commander: ^9.1.0
     find-up: ^6.3.0

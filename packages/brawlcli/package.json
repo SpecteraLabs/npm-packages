@@ -1,7 +1,7 @@
 {
-  "name": "@brawlstats/brawlcli",
+  "name": "@brawlstats/cli",
   "version": "0.0.1",
-  "private": "true",
+  "private": true,
   "description": "A cli wrapper around brawlstats",
   "author": "@undied",
   "homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlcli#readme",
@@ -12,6 +12,7 @@
     "url": "git+https://github.com/SpecteraLabs/npm-packages.git"
   },
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
