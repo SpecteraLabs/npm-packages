@@ -17,6 +17,8 @@
   "bugs": {
     "url": "https://github.com/SpecteraLabs/npm-packages/issues"
   },
+  "packageManager": "yarn@3.2.0",
+  "prettier": "@sapphire/prettier-config",
   "dependencies": {
     "commander": "^9.1.0",
     "find-up": "^6.3.0"
