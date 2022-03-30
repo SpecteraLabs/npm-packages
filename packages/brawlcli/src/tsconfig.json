@@ -1,0 +1,15 @@
+{
+	"extends": "../../../tsconfig.base.json",
+	"compilerOptions": {
+		"module": "ESnext",
+		"rootDir": "./",
+		"outDir": "../dist",
+		"composite": true,
+		"baseUrl": ".",
+		"preserveConstEnums": true,
+		"paths": {
+			"_functions/*": ["functions/*.ts"]
+		}
+	},
+	"include": ["."]
+}
