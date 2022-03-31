@@ -17,8 +17,10 @@ brawlstats
 	.command('player')
 	.description('Get info of a player via their tag')
 	.alias('fp')
-	.argument('<tag>', 'the tag of the player')
+	.argument('<tag>', 'the tag of the player', (v) => v.replace(/^#/, ''))
 	.action((tag: string) => {
 		// TODO
 		console.log(tag);
 	});
+
+brawlstats.parse(process.argv);

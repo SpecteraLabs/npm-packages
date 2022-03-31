@@ -14,14 +14,19 @@
   },
   "scripts": {
     "build": "tsup",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "dev": "node ."
   },
   "bugs": {
     "url": "https://github.com/SpecteraLabs/npm-packages/issues"
   },
+  "imports": {
+    "_functions/*": "./dist/functions/*.js",
+    "_commands/*": "./dist/commands/*.js"
+  },
   "packageManager": "yarn@3.2.0",
   "prettier": "@sapphire/prettier-config",
   "dependencies": {
+    "brawlstats": "^2.0.0",
     "commander": "^9.1.0",
     "find-up": "^6.3.0"
   }
