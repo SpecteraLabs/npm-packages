@@ -13,7 +13,7 @@ export class BrawlersMap<K = BrawlerInterface> extends Collection<string, K | Br
 
 	public async init() {
 		if (this.#all.size) return this;
-		console.log(await this.#getBrawlers());
+		await this.#getBrawlers();
 		for (const brawler of this.#all) {
 			this.set(brawler.name, brawler);
 		}
