@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/SpecteraLabs/brawlstats/compare/brawlstats@2.1.0...brawlstats@2.1.1) (2022-04-01)
+
+
+### Bug Fixes
+
+* export dts ([436d4a9](https://github.com/SpecteraLabs/brawlstats/commit/436d4a908e07a76f04db513769e24013b6bfa987))
+
+
+
+
+
 # [2.1.0](https://github.com/SpecteraLabs/brawlstats/compare/brawlstats@2.0.0...brawlstats@2.1.0) (2022-04-01)
 
 

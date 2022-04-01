@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](github.com/SpecteraLabs/tag-parser/compare/@spectera/tag-parser@2.3.0...@spectera/tag-parser@2.3.1) (2022-04-01)
+
+
+### Bug Fixes
+
+* export dts ([436d4a9](github.com/SpecteraLabs/tag-parser/commits/436d4a908e07a76f04db513769e24013b6bfa987))
+
+
+
+
+
 # [2.3.0](github.com/SpecteraLabs/tag-parser/compare/@spectera/tag-parser@2.2.0...@spectera/tag-parser@2.3.0) (2022-04-01)
 
 
