@@ -2,16 +2,20 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
 	clean: true,
-	dts: true,
-	entry: ['src/**/*.ts', '!src/**/*.d.ts'],
+	dts: false,
+	entry: ['src/index.ts'],
 	format: ['esm', 'cjs'],
 	minify: false,
 	skipNodeModulesBundle: true,
 	sourcemap: true,
-	target: 'esnext',
+	target: 'es2021',
 	tsconfig: 'src/tsconfig.json',
-	bundle: false,
-	shims: false,
 	keepNames: true,
-	splitting: false
+	esbuildOptions: (options, context) => {
+		if (context.format === 'cjs') {
+			options.banner = {
+				js: '"use strict";'
+			};
+		}
+	}
 });

@@ -1,33 +1,36 @@
 {
-  "name": "@brawlstats/cli",
-  "version": "0.0.1",
-  "private": true,
-  "description": "A cli wrapper around brawlstats",
-  "author": "@undied",
-  "type": "module",
-  "homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlcli#readme",
-  "license": "MIT",
-  "main": "dist/cli.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SpecteraLabs/npm-packages.git"
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "node ."
-  },
-  "bugs": {
-    "url": "https://github.com/SpecteraLabs/npm-packages/issues"
-  },
-  "imports": {
-    "_functions/*": "./dist/functions/*.js",
-    "_commands/*": "./dist/commands/*.js"
-  },
-  "packageManager": "yarn@3.2.0",
-  "prettier": "@sapphire/prettier-config",
-  "dependencies": {
-    "brawlstats": "^2.0.0",
-    "commander": "^9.1.0",
-    "find-up": "^6.3.0"
-  }
+	"name": "@brawlstats/cli",
+	"version": "0.0.1",
+	"private": true,
+	"description": "A cli wrapper around brawlstats",
+	"author": "@undied",
+	"type": "module",
+	"bin": {
+		"brawlstats": "./dist/cli.js"
+	},
+	"homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlcli#readme",
+	"license": "MIT",
+	"main": "dist/cli.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SpecteraLabs/npm-packages.git"
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "node ."
+	},
+	"bugs": {
+		"url": "https://github.com/SpecteraLabs/npm-packages/issues"
+	},
+	"imports": {
+		"#functions/*": "./dist/functions/*.js",
+		"#commands/*": "./dist/commands/*.js"
+	},
+	"packageManager": "yarn@3.2.0",
+	"prettier": "@sapphire/prettier-config",
+	"dependencies": {
+		"brawlstats": "^2.0.0",
+		"commander": "^9.1.0",
+		"find-up": "^6.3.0"
+	}
 }

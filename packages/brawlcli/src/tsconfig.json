@@ -8,8 +8,8 @@
 		"baseUrl": ".",
 		"preserveConstEnums": true,
 		"paths": {
-			"_functions/*": ["functions/*.ts"],
-			"_commands/*": ["commands/*.ts"]
+			"#functions/*": ["functions/*.ts"],
+			"#commands/*": ["commands/*.ts"]
 		}
 	},
 	"include": ["."]
