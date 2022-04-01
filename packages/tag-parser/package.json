@@ -5,19 +5,19 @@
   "keywords": [],
   "author": "undied",
   "license": "Apache-2.0",
-  "main": "./bundled/index.cjs",
-  "module": "./bundled/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "packageManager": "yarn@3.2.0",
   "exports": {
-    "require": "./bundled/index.cjs",
-    "import": "./bundled/index.mjs"
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.mjs"
   },
   "homepage": "github.com/SpecteraLabs/tag-parser",
   "repository": {
     "type": "git",
     "url": "github.com/SpecteraLabs/tag-parser"
   },
-  "types": "./bundled/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prepublishOnly": "yarn dev",
     "build": "tsup",
