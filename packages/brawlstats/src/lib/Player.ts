@@ -68,14 +68,14 @@ export interface IPlayer {
 	club: Club;
 	brawlers?: BrawlersEntity[] | null;
 }
-export interface Icon {
+interface Icon {
 	id: number;
 }
-export interface Club {
+interface Club {
 	tag: string;
 	name: string;
 }
-export interface BrawlersEntity {
+interface BrawlersEntity {
 	id: number;
 	name: string;
 	power: number;

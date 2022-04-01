@@ -407,6 +407,8 @@ __metadata:
     brawlstats: ^2.0.0
     commander: ^9.1.0
     find-up: ^6.3.0
+  bin:
+    brawlstats: ./dist/cli.js
   languageName: unknown
   linkType: soft
 
