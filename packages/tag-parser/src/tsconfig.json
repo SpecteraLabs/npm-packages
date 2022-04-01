@@ -2,7 +2,7 @@
 	"extends": "../../../tsconfig.base.json",
 	"compilerOptions": {
 		"allowJs": true,
-		"rootDir": "src",
+		"rootDir": ".",
 		"incremental": true,
 		"noUnusedLocals": true,
 		"composite": false,

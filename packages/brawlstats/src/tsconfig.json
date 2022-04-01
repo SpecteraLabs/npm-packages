@@ -6,9 +6,8 @@
 		"rootDir": ".",
 		"baseUrl": ".",
 		"skipLibCheck": true,
-		"composite": true,
 		"tsBuildInfoFile": ".tsbuildinfo"
 	},
-	"include": [".", "./**/*.json"],
+	"include": ["."],
 	"exclude": ["./tsconfig.json"]
 }
