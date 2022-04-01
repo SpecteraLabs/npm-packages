@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "undied",
   "license": "Apache-2.0",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "packageManager": "yarn@3.2.0",
   "exports": {
@@ -19,7 +19,6 @@
   },
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepublishOnly": "yarn dev",
     "build": "tsup",
     "format": "prettier --write './src/**/*.ts'",
     "clean": "node ./scripts/clean.mjs",
