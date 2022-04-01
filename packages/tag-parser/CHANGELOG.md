@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](github.com/SpecteraLabs/tag-parser/compare/@spectera/tag-parser@2.2.0...@spectera/tag-parser@2.3.0) (2022-04-01)
+
+
+### Bug Fixes
+
+* change folder name for exports ([0558508](github.com/SpecteraLabs/tag-parser/commits/0558508ca043f493b582b86ea28ae6837e1150a5))
+
+
+### Features
+
+* add command to grab a player from api ([d7a7ef6](github.com/SpecteraLabs/tag-parser/commits/d7a7ef6885a99431edb4b5b3a0e6d844607e5c50))
+
+
+
+
+
 # 2.2.0 (2022-03-18)
 
 
