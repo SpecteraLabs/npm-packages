@@ -21,6 +21,7 @@ brawlstats
 	.alias('p')
 	.addArgument(new Argument('<tag>', 'the tag of the player').argRequired())
 	.option('-b, --battlelog', "get the player's battlelog")
+	.option('-br, --brawlers', "get the player's brawlers")
 	.action(getPlayer);
 
 brawlstats.parse(process.argv);

@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
 	clean: true,
-	entry: ['src/**/*.ts', '!src/**/*.d.ts'],
+	entry: ['src/**/*.ts'],
 	format: ['esm'],
 	minify: false,
 	skipNodeModulesBundle: true,

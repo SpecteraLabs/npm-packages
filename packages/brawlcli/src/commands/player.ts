@@ -22,8 +22,8 @@ export async function getPlayer(tag: string, options: any) {
 			}
 		];
 		console.table(message);
-		const battles = await player.getBattleLog();
 		if (options.battlelog) {
+			const battles = await player.getBattleLog();
 			type MyBattle = ItemsEntity & {
 				map?: string | null;
 				mode?: string;
@@ -48,6 +48,20 @@ export async function getPlayer(tag: string, options: any) {
 				battle.battleTime = dateFromBrawlStars(battle.battleTime);
 			}
 			console.table(battles);
+		}
+		if (options.brawlers) {
+			const { brawlers } = player;
+			const mappedBrawlers = brawlers?.map((brawler) => {
+				const { name, power, rank, trophies, highestTrophies } = brawler;
+				return {
+					name,
+					power,
+					rank,
+					trophies,
+					highestTrophies
+				}
+			})
+			console.table(mappedBrawlers);
 		}
 	}
 }
