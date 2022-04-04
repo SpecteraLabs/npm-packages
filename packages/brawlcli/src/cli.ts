@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-import { Argument, Command } from 'commander';
+import { Command } from 'commander';
 import { readFile } from 'node:fs/promises';
 import { URL } from 'node:url';
 import { getPlayer } from '#commands/player';
+import { getBrawler } from '#commands/brawlers';
 
 const brawlstats = new Command();
 
@@ -15,13 +16,20 @@ brawlstats //
 	.version(version)
 	.showSuggestionAfterError();
 
-brawlstats
+brawlstats //
 	.command('player')
 	.description('Get info of a player via their tag')
 	.alias('p')
-	.addArgument(new Argument('<tag>', 'the tag of the player').argRequired())
+	.argument('<tag>', 'the tag of the player')
 	.option('-b, --battlelog', "get the player's battlelog")
 	.option('-br, --brawlers', "get the player's brawlers")
 	.action(getPlayer);
+
+brawlstats //
+	.command('brawlers')
+	.description('Get info of a brawler via their name')
+	.alias('b')
+	.argument('[name]', 'the name of the brawler')
+	.action(getBrawler);
 
 brawlstats.parse(process.argv);

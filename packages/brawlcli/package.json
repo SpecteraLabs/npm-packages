@@ -17,7 +17,9 @@
 	},
 	"scripts": {
 		"build": "tsup",
-		"dev": "node ."
+		"dev": "node .",
+		"lint": "eslint src/**/*.ts --fix",
+		"format": "prettier -w src/**/*.ts"
 	},
 	"bugs": {
 		"url": "https://github.com/SpecteraLabs/npm-packages/issues"

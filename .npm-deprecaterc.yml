@@ -1,6 +1,6 @@
 name: '*next*'
 verbose: true
-packages:
+package:
   - '@spectera/tag-parser'
   - 'brawlstats'
   - '@brawlstats/cli'

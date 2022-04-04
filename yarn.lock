@@ -8910,6 +8910,7 @@ __metadata:
     cz-conventional-changelog: ^3.3.0
     dotenv: 16.0.0
     eslint: ^8.12.0
+    eslint-plugin-prettier: ^4.0.0
     husky: ^7.0.4
     jest: ^27.5.1
     lerna: ^4.0.0

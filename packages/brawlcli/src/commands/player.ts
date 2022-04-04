@@ -59,8 +59,8 @@ export async function getPlayer(tag: string, options: any) {
 					rank,
 					trophies,
 					highestTrophies
-				}
-			})
+				};
+			});
 			console.table(mappedBrawlers);
 		}
 	}
