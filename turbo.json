@@ -13,9 +13,9 @@
       "dependsOn": [],
       "outputs": []
     },
-	"format": {
-		"dependsOn": [],
-		"outputs": []
-	}
+    "format": {
+      "dependsOn": [],
+      "outputs": []
+    }
   }
 }
