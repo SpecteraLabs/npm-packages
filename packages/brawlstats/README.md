@@ -29,7 +29,7 @@ import { Client } from 'brawlstats';
 const client = new Client({
 	/**
 	 * Your Brawl Stars API key.
-	 * @defaults to the environment variable `BRAWLSTATS_TOKEN`
+	 * @defaults to the environment variable `BRAWLSTARS_TOKEN`
 	*/
 	token: 'your-api-key'
 })
@@ -50,7 +50,7 @@ const { Client } = require('brawlstats');
 const client = new Client({
 	/**
 	 * Your Brawl Stars API key.
-	 * @defaults to the environment variable `BRAWLSTATS_TOKEN`
+	 * @defaults to the environment variable `BRAWLSTARS_TOKEN`
 	*/
 	token: 'your-api-key'
 })
