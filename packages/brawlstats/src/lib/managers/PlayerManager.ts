@@ -1,7 +1,7 @@
 import { Structure } from '../structures/Structure';
 import { Player } from '../structures/Player';
 import { parseTag } from '../helpers';
-import { from } from 'lib/utils';
+import { from } from '../utils';
 
 export class PlayerManager {
 	#cache: Player[] = [];
@@ -24,5 +24,6 @@ export class PlayerManager {
 			const player = await this.fetch(tag);
 			players.push(player!);
 		}
+		return players;
 	}
 }
