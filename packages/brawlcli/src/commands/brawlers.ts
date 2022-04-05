@@ -27,7 +27,9 @@ export async function getBrawler(name?: string) {
 			const mapped = brawlers.map((brawler) => {
 				return {
 					name: brawler.name,
-					id: brawler.id
+					id: brawler.id,
+					'Star Powers': brawler.starPowers?.map((star) => star.name).join(', '),
+					Gadgets: brawler.gadgets?.map((gadget) => gadget.name).join(', ')
 				};
 			});
 			console.table(mapped);
