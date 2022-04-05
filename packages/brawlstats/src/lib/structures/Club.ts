@@ -1,6 +1,5 @@
 import { Structure } from './Structure';
-import type { IClub } from '../types';
-import { from } from '../utils';
+import type { IClub, MembersEntity } from '../types';
 
 export class Club extends Structure {
 	public tag!: string;
@@ -10,18 +9,10 @@ export class Club extends Structure {
 	public badgeId!: number;
 	public requiredTrophies!: number;
 	public trophies!: number;
+	public members!: MembersEntity[];
 
 	public constructor(data: Omit<IClub, 'members'>) {
 		super('clubs');
 		Object.assign(this, data);
-	}
-
-	public static async getClub(tag: string, token = process.env.BRAWLSTARS_TOKEN) {
-		const base = new Structure('clubs');
-		return from(async () => {
-			const data = await base.request<IClub>(`${tag}`, token);
-			const { members, ...res } = data;
-			return new Club(res);
-		});
 	}
 }

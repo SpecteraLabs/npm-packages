@@ -1,4 +1,3 @@
-import { fetch } from '@sapphire/fetch';
 import { Structure } from './Structure';
 import type { Battlelog, StarPowersEntityOrGadgetsEntity } from '../types';
 import { from } from '../utils';
@@ -31,19 +30,6 @@ export class Player extends Structure {
 			const tag = this.tag.replace('#', '%23');
 			const res = await super.request<Battlelog>(`${tag}/battlelog`);
 			return res.items;
-		});
-	}
-
-	public static getPlayer(tag: string, token: string) {
-		return from(async () => {
-			const res = await fetch<Omit<IPlayer, 'trioVictories'>>(`https://api.brawlstars.com/v1/players/${tag}`, {
-				headers: {
-					Authorization: `Bearer ${token}`
-				}
-			});
-			const { '3vs3Victories': wins, ...data } = res;
-			Reflect.set(data, 'trioVictories', wins);
-			return new Player(data as Omit<IPlayer, '3vs3Victories'>);
 		});
 	}
 }
