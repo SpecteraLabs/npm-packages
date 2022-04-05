@@ -23,7 +23,8 @@
 		"commit": "git-cz",
 		"cz": "git-cz",
 		"watch": "tsup --watch",
-		"prepublish": "yarn build"
+		"prepublish": "yarn build",
+		"lint": "eslint src/**/*.ts --fix"
 	},
 	"license": "Apache-2.0",
 	"bugs": {

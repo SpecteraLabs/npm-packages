@@ -1,7 +1,7 @@
 import { BrawlersMap } from './Brawlers';
-import { Club } from './Club';
-import { Event } from './Events';
-import { Player } from './Player';
+import { Club } from './structures/Club';
+import { Event } from './structures/Events';
+import { Player } from './structures/Player';
 
 export class Client {
 	#token!: string;
@@ -18,7 +18,7 @@ export class Client {
 	 * @async
 	 * @returns {Promise<Player>} The player from the api
 	 */
-	public async getPlayer(tag: string): Promise<Player> {
+	public getPlayer(tag: string): Promise<Player> {
 		tag = tag.replace('#', '%23');
 		return Player.getPlayer(tag, this.#token);
 	}

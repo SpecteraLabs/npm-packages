@@ -1,8 +1,8 @@
-import { Base } from './Base';
-import type { IClub } from './types';
-import { from } from './utils';
+import { Structure } from './Structure';
+import type { IClub } from '../types';
+import { from } from '../utils';
 
-export class Club extends Base {
+export class Club extends Structure {
 	public tag!: string;
 	public name!: string;
 	public description!: string;
@@ -17,7 +17,7 @@ export class Club extends Base {
 	}
 
 	public static async getClub(tag: string, token = process.env.BRAWLSTARS_TOKEN) {
-		const base = new Base('clubs');
+		const base = new Structure('clubs');
 		return from(async () => {
 			const data = await base.request<IClub>(`${tag}`, token);
 			const { members, ...res } = data;

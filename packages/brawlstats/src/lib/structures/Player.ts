@@ -1,9 +1,9 @@
 import { fetch } from '@sapphire/fetch';
-import { Base } from './Base';
-import type { Battlelog, StarPowersEntityOrGadgetsEntity } from './types';
-import { from } from './utils';
+import { Structure } from './Structure';
+import type { Battlelog, StarPowersEntityOrGadgetsEntity } from '../types';
+import { from } from '../utils';
 
-export class Player extends Base {
+export class Player extends Structure {
 	public tag!: string;
 	public name!: string;
 	public nameColor!: string;
@@ -26,7 +26,7 @@ export class Player extends Base {
 		Object.assign(this, options);
 	}
 
-	public async getBattleLog() {
+	public getBattleLog() {
 		return from(async () => {
 			const tag = this.tag.replace('#', '%23');
 			const res = await super.request<Battlelog>(`${tag}/battlelog`);
@@ -34,7 +34,7 @@ export class Player extends Base {
 		});
 	}
 
-	public static async getPlayer(tag: string, token: string) {
+	public static getPlayer(tag: string, token: string) {
 		return from(async () => {
 			const res = await fetch<Omit<IPlayer, 'trioVictories'>>(`https://api.brawlstars.com/v1/players/${tag}`, {
 				headers: {

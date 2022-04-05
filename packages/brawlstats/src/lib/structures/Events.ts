@@ -1,15 +1,15 @@
 import Collection from '@discordjs/collection';
-import { Base } from './Base';
-import type { Events, IEvent } from './types';
-import { dateFromBrawlStars, from } from './utils';
+import { Structure } from './Structure';
+import type { Events, IEvent } from '../types';
+import { dateFromBrawlStars, from } from '../utils';
 
-export class Event extends Base {
+export class Event extends Structure {
 	public constructor() {
 		super('events/rotation');
 	}
 
 	public static async getRotation(key: string) {
-		const base = new Base('events/rotation');
+		const base = new Structure('events/rotation');
 		return from(async () => {
 			const collection = new Collection<Events | keyof typeof Events, IEvent>();
 			const data = await base.request<IEvent[]>('', key);
