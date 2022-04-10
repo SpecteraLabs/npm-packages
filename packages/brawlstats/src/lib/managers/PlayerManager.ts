@@ -18,7 +18,8 @@ export class PlayerManager {
 		tag = parseTag(tag);
 		return from(async () => {
 			const data = await structure.request<Player>(`${tag}`, this.#token);
-			return new Player(data);
+			const player = new Player(data);
+			return player;
 		});
 	}
 

@@ -18,7 +18,9 @@ export class ClubManager {
 		tag = parseTag(tag);
 		return from(async () => {
 			const data = await structure.request<Club>(`${tag}`, this.#token);
-			return new Club(data);
+			const club = new Club(data);
+			this.#cache.push(club);
+			return club;
 		});
 	}
 
