@@ -2,7 +2,7 @@
 
 # brawlstats
 
-**An advanced api wrapper built over brawlstars api**
+**An advanced and lightweight wrapper around the Brawl Stars API**
 
 [![GitHub](https://img.shields.io/github/license/specteralabs/brawlstats)](https://github.com/SpecteraLabs/brawlstats/blob/main/LICENSE.md)
 [![npm](https://img.shields.io/npm/v/brawlstats?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/brawlstats)
@@ -68,6 +68,6 @@ const client = new Client({
 ```
 
 ## Miscallaneous
-* Like the wrapper? then please star us at [GitHub](https://github.com/SpecteraLabs/brawlstats)
-* If you have any questions, feel free to [open an issue](https://github.com/SpecteraLabs/brawlstats/issues)
-* If you have any feedback, feel free to [open a discussion](https://github.com/SpecteraLabs/brawlstats/discussions/new?category=ideas)
+* Like the wrapper? then please star us at [GitHub](https://github.com/SpecteraLabs/npm-packages)
+* If you have any questions, feel free to [open an issue](https://github.com/SpecteraLabs/npm-packages/issues)
+* If you have any feedback, feel free to [open a discussion](https://github.com/SpecteraLabs/npm-packages/discussions/new?category=ideas)
