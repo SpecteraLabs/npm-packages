@@ -10,10 +10,10 @@ export class BattlelogManager {
 	}
 
 	public fetch(tag: string) {
-		const structure = new Structure('players/battlelog');
+		const structure = new Structure('players');
 		tag = parseTag(tag);
 		return from(async () => {
-			const data = await structure.request<{ items: Battlelog[]; paging: unknown }>(`${tag}`, this.#token);
+			const data = await structure.request<{ items: Battlelog[]; paging: unknown }>(`${tag}/battlelog`, this.#token);
 			return data.items;
 		});
 	}
