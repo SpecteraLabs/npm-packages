@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@2.1.1...brawlstats@3.0.0) (2022-04-13)
+
+
+### Features
+
+* add leaderdboards ([21602d2](https://github.com/SpecteraLabs/npm-packages/commit/21602d210e46e0c3104853b33b2e57e87df51502))
+* add managers inside Client ([de26ab5](https://github.com/SpecteraLabs/npm-packages/commit/de26ab5d1d0a014fe7a5125b74ea1f59a75511c9))
+* add structures and managers ([7d1e421](https://github.com/SpecteraLabs/npm-packages/commit/7d1e421b5cd1c8ae94a02ee9472f756028cc809c))
+* add support for battlelogs and better output ([8742299](https://github.com/SpecteraLabs/npm-packages/commit/87422996d4c0f6516f2598ef1337a3759e4ba3f3))
+
+
+### Reverts
+
+* Revert "Revert "feat(brawlstats): v3"" ([fff7b6f](https://github.com/SpecteraLabs/npm-packages/commit/fff7b6f7e872a779a132e393a2d7d698c4ee20cf))
+
+
+### BREAKING CHANGES
+
+* the methods Client#get* are removed now
+
+
+
+
+
 ## [2.1.1](https://github.com/SpecteraLabs/brawlstats/compare/brawlstats@2.1.0...brawlstats@2.1.1) (2022-04-01)
 
 
