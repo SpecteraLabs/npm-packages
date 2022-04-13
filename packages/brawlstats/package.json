@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlstats"
+		"url": "git+https://github.com/SpecteraLabs/brawlstats"
 	},
 	"scripts": {
 		"build": "tsup",
@@ -23,14 +23,13 @@
 		"commit": "git-cz",
 		"cz": "git-cz",
 		"watch": "tsup --watch",
-		"prepublish": "yarn build",
-		"lint": "eslint src/**/*.ts --fix"
+		"prepublish": "yarn build"
 	},
 	"license": "Apache-2.0",
 	"bugs": {
-		"url": "https://github.com/SpecteraLabs/npm-packages/issues"
+		"url": "https://github.com/SpecteraLabs/brawlstats/issues"
 	},
-	"homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlstats#readme",
+	"homepage": "https://github.com/SpecteraLabs/brawlstats#readme",
 	"keywords": [
 		"api",
 		"node",

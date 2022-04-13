@@ -16,7 +16,7 @@ export class BrawlAPIError extends Error {
 	}
 
 	// eslint-disable-next-line @typescript-eslint/class-literal-property-style
-	public override get name(): string {
+	public get name(): string {
 		return 'BrawlAPIError';
 	}
 }
