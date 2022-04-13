@@ -1,8 +1,8 @@
-import { Client, Brawlers } from '../src';
+import { Brawlers } from '../src';
+import { makeBrawlersMap } from '../src/lib/helpers';
 import 'dotenv/config';
 
-test('Test if a brawler is fetched', async () => {
-	const client = new Client();
-	const brawlers = await client.getBrawlers();
-	expect(brawlers.get(Brawlers.SHELLY)).toEqual(brawlers.get('SHELLY'));
+test('Test if a brawler is fetched', () => {
+	const brawlers = makeBrawlersMap();
+	expect(brawlers.get(Brawlers.MR_P)).toEqual(brawlers.get('MR. P'));
 });

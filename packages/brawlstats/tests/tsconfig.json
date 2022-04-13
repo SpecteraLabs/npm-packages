@@ -8,6 +8,5 @@
 		"moduleResolution": "node"
 	},
 	"include": [".", "../src/**/*"],
-	"exclude": ["../dist/**/*"],
-	"references": [{ "path": "../src" }]
+	"exclude": ["../dist/**/*"]
 }

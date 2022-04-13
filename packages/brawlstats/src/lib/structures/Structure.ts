@@ -1,6 +1,6 @@
 import { fetch } from '@sapphire/fetch';
 
-export class Base {
+export class Structure {
 	#url = 'https://api.brawlstars.com/v1';
 	#endpoint: string;
 	public constructor(endpoint: string) {

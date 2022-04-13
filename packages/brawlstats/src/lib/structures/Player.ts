@@ -1,9 +1,8 @@
-import { fetch } from '@sapphire/fetch';
-import { Base } from './Base';
-import type { Battlelog, StarPowersEntityOrGadgetsEntity } from './types';
-import { from } from './utils';
+import { Structure } from './Structure';
+import type { Battlelog, StarPowersEntityOrGadgetsEntity } from '../types';
+import { from } from '../utils';
 
-export class Player extends Base {
+export class Player extends Structure {
 	public tag!: string;
 	public name!: string;
 	public nameColor!: string;
@@ -19,31 +18,18 @@ export class Player extends Base {
 	public duoVictories!: number;
 	public bestRoboRumbleTime!: number;
 	public bestTimeAsBigBrawler!: number;
-	public club!: Club;
+	public club!: PlayerClub;
 	public brawlers?: BrawlersEntity[] | null;
 	public constructor(options: Omit<IPlayer, '3vs3Victories'>) {
 		super('players');
 		Object.assign(this, options);
 	}
 
-	public async getBattleLog() {
+	public getBattleLog() {
 		return from(async () => {
 			const tag = this.tag.replace('#', '%23');
 			const res = await super.request<Battlelog>(`${tag}/battlelog`);
 			return res.items;
-		});
-	}
-
-	public static async getPlayer(tag: string, token: string) {
-		return from(async () => {
-			const res = await fetch<Omit<IPlayer, 'trioVictories'>>(`https://api.brawlstars.com/v1/players/${tag}`, {
-				headers: {
-					Authorization: `Bearer ${token}`
-				}
-			});
-			const { '3vs3Victories': wins, ...data } = res;
-			Reflect.set(data, 'trioVictories', wins);
-			return new Player(data as Omit<IPlayer, '3vs3Victories'>);
 		});
 	}
 }
@@ -65,13 +51,13 @@ export interface IPlayer {
 	duoVictories: number;
 	bestRoboRumbleTime: number;
 	bestTimeAsBigBrawler: number;
-	club: Club;
+	club: PlayerClub;
 	brawlers?: BrawlersEntity[] | null;
 }
 interface Icon {
 	id: number;
 }
-interface Club {
+export interface PlayerClub {
 	tag: string;
 	name: string;
 }

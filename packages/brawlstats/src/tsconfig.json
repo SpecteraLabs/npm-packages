@@ -1,11 +1,12 @@
 {
-	"extends": "../tsconfig.base.json",
+	"extends": "@sapphire/ts-config/extra-strict-without-decorators",
 	"compilerOptions": {
 		"allowJs": true,
-		"outDir": "../dist",
+		"outDir": "../types",
 		"rootDir": ".",
-		"baseUrl": ".",
 		"skipLibCheck": true,
+		"composite": false,
+		"emitDeclarationOnly": true,
 		"tsBuildInfoFile": ".tsbuildinfo"
 	},
 	"include": ["."],

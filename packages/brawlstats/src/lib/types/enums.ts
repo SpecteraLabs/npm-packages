@@ -52,7 +52,8 @@ export const enum Brawlers {
 	ASH = 'ASH',
 	MEG = 'MEG',
 	LOLA = 'LOLA',
-	FANG = 'FANG'
+	FANG = 'FANG',
+	EVE = 'EVE'
 }
 
 export const enum Events {
