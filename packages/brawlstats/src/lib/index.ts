@@ -1,6 +1,6 @@
-export { Client } from './Client';
-export type { Club } from './structures/Club';
-export type { Player } from './structures/Player';
-export type { IEvent as Event } from './types';
-export { dateFromBrawlStars } from './utils';
-export * from './types/enums';
+export * from './Client';
+export * from './types/index';
+export * from './Brawlers';
+export * from './Club';
+export * from './Player';
+export * from './utils';

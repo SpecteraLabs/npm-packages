@@ -1,28 +1,56 @@
-import { makeBrawlersMap } from './makeBrawlersMap';
-import { BattlelogManager } from './managers/BattlelogManager';
-import { ClubManager } from './managers/ClubManager';
-import { LeaderboardManager } from './managers/LeaderboardManager';
-import { PlayerManager } from './managers/PlayerManager';
-import { RotationManager } from './managers/RotationManager';
+import { BrawlersMap } from './Brawlers';
+import { Club } from './Club';
+import { Event } from './Events';
+import { Player } from './Player';
 
 export class Client {
 	#token!: string;
 	public options: ClientOptions;
-	public brawlers = makeBrawlersMap();
-	public players: PlayerManager;
-	public clubs: ClubManager;
-	public rotation: RotationManager;
-	public leaderboards: LeaderboardManager;
-	public battlelogs: BattlelogManager;
 
 	public constructor(options?: ClientOptions) {
 		this.options = options!;
 		this.#token = options?.token ?? (process.env.BRAWLSTARS_TOKEN as string);
-		this.players = new PlayerManager(this.#token);
-		this.clubs = new ClubManager(this.#token);
-		this.rotation = new RotationManager(this.#token);
-		this.leaderboards = new LeaderboardManager(this.#token);
-		this.battlelogs = new BattlelogManager(this.#token);
+	}
+
+	/**
+	 * Get details of a player from the API.
+	 * @param {String} tag The tag of the player.
+	 * @async
+	 * @returns {Promise<Player>} The player from the api
+	 */
+	public async getPlayer(tag: string): Promise<Player> {
+		tag = tag.replace('#', '%23');
+		return Player.getPlayer(tag, this.#token);
+	}
+
+	/**
+	 * Get a list of brawlers from the API which are sent back to you as a {@link BrawlersMap}.
+	 * @async
+	 * @returns {Promise<BrawlersMap>} The brawlers map from the api
+	 */
+	public async getBrawlers(): Promise<BrawlersMap> {
+		const res = new BrawlersMap(this.#token);
+		return res.init();
+	}
+
+	/**
+	 * Get details of a club from the API.
+	 * @async
+	 * @param {String} tag The tag of the club.
+	 * @returns {Promise<Club>} The club from the api.
+	 */
+	public async getClub(tag: string): Promise<Club> {
+		tag = tag.replace('#', '%23');
+		return Club.getClub(tag, this.#token);
+	}
+
+	/**
+	 * Get the events rotation from the API.
+	 * @async
+	 * @returns The events from the api.
+	 */
+	public async getRotation() {
+		return Event.getRotation(this.#token);
 	}
 }
 
