@@ -1,6 +1,9 @@
 import { makeBrawlersMap } from './makeBrawlersMap';
+import { BattlelogManager } from './managers/BattlelogManager';
 import { ClubManager } from './managers/ClubManager';
+import { LeaderboardManager } from './managers/LeaderboardManager';
 import { PlayerManager } from './managers/PlayerManager';
+import { RotationManager } from './managers/RotationManager';
 
 export class Client {
 	#token!: string;
@@ -8,12 +11,18 @@ export class Client {
 	public brawlers = makeBrawlersMap();
 	public players: PlayerManager;
 	public clubs: ClubManager;
+	public rotation: RotationManager;
+	public leaderboards: LeaderboardManager;
+	public battlelogs: BattlelogManager;
 
 	public constructor(options?: ClientOptions) {
 		this.options = options!;
 		this.#token = options?.token ?? (process.env.BRAWLSTARS_TOKEN as string);
 		this.players = new PlayerManager(this.#token);
 		this.clubs = new ClubManager(this.#token);
+		this.rotation = new RotationManager(this.#token);
+		this.leaderboards = new LeaderboardManager(this.#token);
+		this.battlelogs = new BattlelogManager(this.#token);
 	}
 }
 

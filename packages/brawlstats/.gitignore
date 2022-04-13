@@ -3,3 +3,5 @@ dist
 .env
 .turbo
 .tsbuildinfo
+# Testing file
+test.ts

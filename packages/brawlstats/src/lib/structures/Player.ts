@@ -18,7 +18,7 @@ export class Player extends Structure {
 	public duoVictories!: number;
 	public bestRoboRumbleTime!: number;
 	public bestTimeAsBigBrawler!: number;
-	public club!: Club;
+	public club!: PlayerClub;
 	public brawlers?: BrawlersEntity[] | null;
 	public constructor(options: Omit<IPlayer, '3vs3Victories'>) {
 		super('players');
@@ -51,13 +51,13 @@ export interface IPlayer {
 	duoVictories: number;
 	bestRoboRumbleTime: number;
 	bestTimeAsBigBrawler: number;
-	club: Club;
+	club: PlayerClub;
 	brawlers?: BrawlersEntity[] | null;
 }
 interface Icon {
 	id: number;
 }
-interface Club {
+export interface PlayerClub {
 	tag: string;
 	name: string;
 }
