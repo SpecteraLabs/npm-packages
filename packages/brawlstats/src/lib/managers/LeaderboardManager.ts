@@ -41,8 +41,8 @@ export class LeaderboardManager {
 				}
 				case 'clubs': {
 					const clubs = new Collection<string, Leaderboard>();
-					for (const player of data.items) {
-						const leaderboard = new Leaderboard(player);
+					for (const club of data.items) {
+						const leaderboard = new Leaderboard(club);
 						clubs.set(leaderboard.tag, leaderboard);
 					}
 					return clubs;
