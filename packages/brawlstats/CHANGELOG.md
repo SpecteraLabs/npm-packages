@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@3.0.0...brawlstats@3.0.1) (2022-04-14)
+
+
+### Bug Fixes
+
+* export more types for typescript users ([1718876](https://github.com/SpecteraLabs/npm-packages/commit/17188769a58397c82018e54dacb2dac2d0c952b9))
+* remove colorette from dependency ([9a6d94d](https://github.com/SpecteraLabs/npm-packages/commit/9a6d94d3384e45f50020472ace61798dfd33f0b3))
+
+
+
+
+
 # [3.0.0](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@2.1.1...brawlstats@3.0.0) (2022-04-13)
 
 

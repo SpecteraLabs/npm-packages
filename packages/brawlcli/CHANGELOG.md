@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/SpecteraLabs/npm-packages/compare/@brawlstats/cli@0.2.0...@brawlstats/cli@0.2.1) (2022-04-14)
+
+**Note:** Version bump only for package @brawlstats/cli
+
+
+
+
+
 # [0.2.0](https://github.com/SpecteraLabs/npm-packages/compare/@brawlstats/cli@0.1.1...@brawlstats/cli@0.2.0) (2022-04-13)
 
 
