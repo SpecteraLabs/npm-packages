@@ -10,6 +10,11 @@ export class ClubManager {
 		this.#token = token;
 	}
 
+	/**
+	 * Get details of a club from the API.
+	 * @async
+	 * @param {String} tag The tag of the club.
+	 */
 	public fetch(tag: string) {
 		if (this.#cache.some((club) => club.tag === tag)) {
 			return this.#cache.find((club) => club.tag === tag);
@@ -24,6 +29,11 @@ export class ClubManager {
 		});
 	}
 
+	/**
+	 * Get details of a multiple clubs from the API.
+	 * @async
+	 * @param {String} tags The tag of each club.
+	 */
 	public async fetchMany(...tags: string[]) {
 		const clubs: Club[] = [];
 		for (const rawTag of tags) {

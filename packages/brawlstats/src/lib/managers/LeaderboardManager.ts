@@ -12,9 +12,21 @@ export class LeaderboardManager {
 		this.#token = token;
 	}
 
-	public fetch(options: { mode: 'players' | 'clubs'; region: string }): Promise<Collection<string, Leaderboard>>;
-	public fetch(options: { mode: 'brawlers'; region: string; name: BrawlersType }): Promise<Collection<string, Leaderboard>>;
-	public fetch(options: { mode: 'players' | 'clubs' | 'brawlers'; region: string; name?: BrawlersType }): Promise<Collection<string, Leaderboard>> {
+	/**
+	 * Fetch the leaderboards of a player or a club.
+	 * @param {RestOptions} options Options for the leaderboards.
+	 */
+	public fetch(options: RestOptions): Promise<Collection<string, Leaderboard>>;
+	/**
+	 * Fetch the leaderboards of a brawler.
+	 * @param {BrawlerOptions} options Options for the leaderboards.
+	 */
+	public fetch(options: BrawlerOptions): Promise<Collection<string, Leaderboard>>;
+	/**
+	 * Fetch the leaderboards.
+	 * @param {Options} options Options for the leaderboards.
+	 */
+	public fetch(options: Options): Promise<Collection<string, Leaderboard>> {
 		const structure = new Structure('rankings');
 		let { mode, region, name } = options;
 		return from(async () => {
@@ -50,4 +62,19 @@ export class LeaderboardManager {
 			}
 		});
 	}
+}
+
+interface Options {
+	mode: 'players' | 'clubs' | 'brawlers';
+	region: string;
+	name?: BrawlersType;
+}
+interface BrawlerOptions {
+	mode: 'brawlers';
+	region: string;
+	name: BrawlersType;
+}
+interface RestOptions {
+	mode: 'players' | 'clubs';
+	region: string;
 }

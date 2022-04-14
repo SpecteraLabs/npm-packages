@@ -8,6 +8,10 @@ export class RotationManager {
 		this.#token = token;
 	}
 
+	/**
+	 * Get the events rotation from the API.
+	 * @param {RotationOptions} options The options to for data formatting.
+	 */
 	public get(options?: RotationOptions) {
 		const structure = new Structure('events/rotation');
 		return from(async () => {

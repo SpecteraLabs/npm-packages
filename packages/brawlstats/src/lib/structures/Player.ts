@@ -25,6 +25,9 @@ export class Player extends Structure {
 		Object.assign(this, options);
 	}
 
+	/**
+	 * Get battlelog of the player.
+	 */
 	public getBattleLog() {
 		return from(async () => {
 			const tag = this.tag.replace('#', '%23');

@@ -9,6 +9,10 @@ export class BattlelogManager {
 		this.#token = token;
 	}
 
+	/**
+	 * Get battlelog of a player from the API.
+	 * @param tag The tag of the player.
+	 */
 	public fetch(tag: string) {
 		const structure = new Structure('players');
 		tag = parseTag(tag);
@@ -18,6 +22,10 @@ export class BattlelogManager {
 		});
 	}
 
+	/**
+	 * Get battlelogs of multiple players from the API.
+	 * @param tags The tag of each player.
+	 */
 	public async fetchMany(...tags: string[]) {
 		const battlelogs: Battlelog[][] = [];
 		for (const rawTag of tags) {

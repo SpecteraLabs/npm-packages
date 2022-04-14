@@ -10,6 +10,10 @@ export class PlayerManager {
 		this.#token = token;
 	}
 
+	/**
+	 * Get details of a player from the API.
+	 * @param {String} tag The tag of the player.
+	 */
 	public fetch(tag: string) {
 		if (this.#cache.some((player) => player.tag === tag)) {
 			return this.#cache.find((player) => player.tag === tag);
@@ -23,6 +27,10 @@ export class PlayerManager {
 		});
 	}
 
+	/**
+	 * Get details of multiple players from the API.
+	 * @param {String} tags The tag of each player.
+	 */
 	public async fetchMany(...tags: string[]) {
 		const players: Player[] = [];
 		for (const rawTag of tags) {
