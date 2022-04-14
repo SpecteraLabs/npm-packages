@@ -1,6 +1,9 @@
 import Collection from '@discordjs/collection';
 import type { BrawlerInterface, Brawlers, BrawlersType } from './types';
 
+/**
+ * All the brawlers from the API wrapped inside a Map.
+ */
 export function makeBrawlersMap() {
 	const collection = new Collection<Brawlers | BrawlersType, BrawlerInterface>();
 	collection.set('SHELLY', {

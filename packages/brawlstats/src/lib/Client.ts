@@ -33,7 +33,6 @@ interface ClientOptions {
 	/**
 	 * The token to use for the API
 	 * @default process.env.BRAWLSTARS_TOKEN
-	 * @since 1.0.0
 	 */
 	token?: string;
 }
