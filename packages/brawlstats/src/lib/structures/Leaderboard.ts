@@ -2,6 +2,9 @@ import type { Icon } from '../types';
 import type { PlayerClub } from './Player';
 import { Structure } from './Structure';
 
+/**
+ * The entity which we use to construct every leaderboard entry.
+ */
 export class Leaderboard extends Structure {
 	public tag!: string;
 	public name!: string;

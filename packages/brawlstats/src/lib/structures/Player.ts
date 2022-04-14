@@ -2,6 +2,9 @@ import { Structure } from './Structure';
 import type { Battlelog, StarPowersEntityOrGadgetsEntity } from '../types';
 import { from } from '../utils';
 
+/**
+ * The entity which we use to construct every player entry.
+ */
 export class Player extends Structure {
 	public tag!: string;
 	public name!: string;
