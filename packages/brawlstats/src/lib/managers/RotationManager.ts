@@ -31,7 +31,7 @@ export class RotationManager {
 /**
  * The options to get a rotation.
  */
-interface RotationOptions {
+export interface RotationOptions {
 	/**
 	 * The timezone to recieve times in, defaults to Etc/UTC.
 	 * @see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

@@ -37,7 +37,7 @@ export class BattlelogManager {
 	}
 }
 
-interface Battlelog {
+export interface Battlelog {
 	battleTime: string;
 	event: Event;
 	battle: Battle;

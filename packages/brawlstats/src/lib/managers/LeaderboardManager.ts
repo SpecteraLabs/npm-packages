@@ -14,19 +14,19 @@ export class LeaderboardManager {
 
 	/**
 	 * Fetch the leaderboards of a player or a club.
-	 * @param {RestOptions} options Options for the leaderboards.
+	 * @param {RestLeaderboardOptions} options Options for the leaderboards.
 	 */
-	public fetch(options: RestOptions): Promise<Collection<string, Leaderboard>>;
+	public fetch(options: RestLeaderboardOptions): Promise<Collection<string, Leaderboard>>;
 	/**
 	 * Fetch the leaderboards of a brawler.
-	 * @param {BrawlerOptions} options Options for the leaderboards.
+	 * @param {LeaderboardBrawlerOptions} options Options for the leaderboards.
 	 */
-	public fetch(options: BrawlerOptions): Promise<Collection<string, Leaderboard>>;
+	public fetch(options: LeaderboardBrawlerOptions): Promise<Collection<string, Leaderboard>>;
 	/**
 	 * Fetch the leaderboards.
-	 * @param {Options} options Options for the leaderboards.
+	 * @param {LeaderboardOptions} options Options for the leaderboards.
 	 */
-	public fetch(options: Options): Promise<Collection<string, Leaderboard>> {
+	public fetch(options: LeaderboardOptions): Promise<Collection<string, Leaderboard>> {
 		const structure = new Structure('rankings');
 		let { mode, region, name } = options;
 		return from(async () => {
@@ -64,17 +64,17 @@ export class LeaderboardManager {
 	}
 }
 
-interface Options {
+export interface LeaderboardOptions {
 	mode: 'players' | 'clubs' | 'brawlers';
 	region: string;
 	name?: BrawlersType;
 }
-interface BrawlerOptions {
+export interface LeaderboardBrawlerOptions {
 	mode: 'brawlers';
 	region: string;
 	name: BrawlersType;
 }
-interface RestOptions {
+export interface RestLeaderboardOptions {
 	mode: 'players' | 'clubs';
 	region: string;
 }
