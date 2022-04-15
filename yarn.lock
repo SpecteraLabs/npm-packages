@@ -394,7 +394,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@brawlstats/cli@workspace:packages/brawlcli"
   dependencies:
-    brawlstats: ^2.1.1
+    brawlstats: ^3.0.1
     commander: ^9.1.0
     find-up: ^6.3.0
   bin:
@@ -2878,13 +2878,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brawlstats@^2.1.1, brawlstats@workspace:packages/brawlstats":
+"brawlstats@^3.0.1, brawlstats@workspace:packages/brawlstats":
   version: 0.0.0-use.local
   resolution: "brawlstats@workspace:packages/brawlstats"
   dependencies:
     "@discordjs/collection": ^0.5.0
     "@sapphire/fetch": ^2.3.1
-    colorette: ^2.0.16
   languageName: unknown
   linkType: soft
 
@@ -3317,7 +3316,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:^2.0.14, colorette@npm:^2.0.16":
+"colorette@npm:^2.0.14":
   version: 2.0.16
   resolution: "colorette@npm:2.0.16"
   checksum: cd55596a3a2d1071c1a28eee7fd8a5387593ff1bd10a3e8d0a6221499311fe34a9f2b9272d77c391e0e003dcdc8934fb2f8d106e7ef1f7516f8060c901d41a27
