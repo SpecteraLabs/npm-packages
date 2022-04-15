@@ -29,7 +29,7 @@ export class Client {
 /**
  * The options to construct the Client
  */
-interface ClientOptions {
+export interface ClientOptions {
 	/**
 	 * The token to use for the API
 	 * @default process.env.BRAWLSTARS_TOKEN
