@@ -32,7 +32,7 @@
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
 		"brawlstats": "^3.0.1",
-		"commander": "^9.1.0",
+		"commander": "^9.2.0",
 		"find-up": "^6.3.0"
 	}
 }
