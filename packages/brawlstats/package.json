@@ -41,7 +41,7 @@
 	"packageManager": "yarn@3.2.0",
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
-		"@discordjs/collection": "^0.5.0",
+		"@discordjs/collection": "^0.6.0",
 		"@sapphire/fetch": "^2.3.1"
 	}
 }
