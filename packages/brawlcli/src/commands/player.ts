@@ -1,4 +1,4 @@
-import { Client, dateFromBrawlStars, ItemsEntity } from 'brawlstats';
+import { Client, dateFromBrawlStars } from 'brawlstats';
 import { getConfigFile } from '#functions/config';
 
 export async function getPlayer(tag: string, options: any) {
@@ -8,7 +8,7 @@ export async function getPlayer(tag: string, options: any) {
 		const client = new Client({
 			token: config.token
 		});
-		const player = await client.getPlayer(`%23${tag}`);
+		const player = await client.players.fetch(`${tag}`)!;
 		const message = [
 			{
 				Name: player.name,
@@ -24,7 +24,7 @@ export async function getPlayer(tag: string, options: any) {
 		console.table(message);
 		if (options.battlelog) {
 			const battles = await player.getBattleLog();
-			type MyBattle = ItemsEntity & {
+			type MyBattle = any & {
 				map?: string | null;
 				mode?: string;
 				type?: string;
@@ -38,14 +38,12 @@ export async function getPlayer(tag: string, options: any) {
 				typedBattle.type = battle.battle.type.charAt(0).toUpperCase() + battle.battle.type.slice(1);
 				typedBattle.result = battle.battle.result!.charAt(0).toUpperCase() + battle.battle.result!.slice(1);
 				typedBattle['StarPlayer'] = battle.battle.starPlayer ? battle.battle.starPlayer.name : 'N/A';
-				// @ts-expect-error bruh
 				delete battle.event;
-				// @ts-expect-error bruh
 				delete battle.battle;
 				return battle;
 			});
 			for (const battle of battles!) {
-				battle.battleTime = dateFromBrawlStars(battle.battleTime);
+				battle.battleTime = dateFromBrawlStars(battle.battleTime, 'Asia/Kolkata');
 			}
 			console.table(battles);
 		}
