@@ -1,29 +1,30 @@
 {
-  "name": "@spectera/tag-parser",
-  "version": "2.3.1",
-  "description": "Tag parsing library for discord tags",
-  "keywords": [],
-  "author": "undied",
-  "license": "Apache-2.0",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "packageManager": "yarn@3.2.0",
-  "exports": {
-    "require": "./dist/index.cjs",
-    "import": "./dist/index.mjs"
-  },
-  "homepage": "github.com/SpecteraLabs/tag-parser",
-  "repository": {
-    "type": "git",
-    "url": "github.com/SpecteraLabs/tag-parser"
-  },
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsup",
-    "format": "prettier --write './src/**/*.ts'",
-    "clean": "node ./scripts/clean.mjs",
-    "dev": "yarn format && yarn clean && yarn build",
-    "test": "jest"
-  },
-  "prettier": "@sapphire/prettier-config"
+	"name": "@spectera/tag-parser",
+	"version": "2.3.1",
+	"description": "Tag parsing library for discord tags",
+	"keywords": [],
+	"author": "undied",
+	"license": "Apache-2.0",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"packageManager": "yarn@3.2.0",
+	"exports": {
+		"require": "./dist/index.cjs",
+		"import": "./dist/index.mjs"
+	},
+	"homepage": "github.com/SpecteraLabs/tag-parser",
+	"repository": {
+		"type": "git",
+		"url": "github.com/SpecteraLabs/tag-parser"
+	},
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "tsup",
+		"format": "prettier --write './src/**/*.ts'",
+		"clean": "node ./scripts/clean.mjs",
+		"dev": "yarn format && yarn clean && yarn build",
+		"test": "jest",
+		"lint": "eslint src/**/*.ts --fix"
+	},
+	"prettier": "@sapphire/prettier-config"
 }

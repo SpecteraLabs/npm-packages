@@ -6,13 +6,12 @@ export default async (): Promise<Config.InitialOptions> => ({
   preset: "ts-jest",
   testEnvironment: "node",
   testRunner: "jest-circus/runner",
-  testMatch: [
-    "<rootDir>/packages/**/tests/**/*.test.ts",
-  ],
-  setupFilesAfterEnv: ["jest-extended/all"],
+  testMatch: ["<rootDir>/packages/**/tests/**/*.test.ts"],
+  collectCoverageFrom: ["<rootDir>/packages/**/src/**/*.ts"],
   globals: {
     "ts-jest": {
       tsconfig: "<rootDir>/tsconfig.base.json",
     },
   },
+  reporters: ["default", "github-actions"],
 });
