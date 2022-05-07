@@ -1,7 +1,0 @@
-node_modules
-.yarn/cache
-dist
-bundled
-.rollup.cache
-*.buildinfo*
-.turbo

@@ -1,7 +1,0 @@
-dist/
-.yarn/
-node_modules/
-.github/
-bundled/
-*.d.ts
-*.js
