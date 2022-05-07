@@ -2,10 +2,11 @@ import { Structure } from '../structures/Structure';
 import { Player } from '../structures/Player';
 import { parseTag } from '../helpers';
 import { from } from '../utils';
+import Collection from '@discordjs/collection';
 
 export class PlayerManager {
 	#token: string;
-	#cache: Player[] = [];
+	#cache: Collection<string, Player> = new Collection();
 	public constructor(token: string) {
 		this.#token = token;
 	}
@@ -15,14 +16,15 @@ export class PlayerManager {
 	 * @param {String} tag The tag of the player.
 	 */
 	public fetch(tag: string) {
-		if (this.#cache.some((player) => player.tag === tag)) {
-			return this.#cache.find((player) => player.tag === tag);
+		if (this.#cache.has(tag)) {
+			return this.#cache.get(tag);
 		}
 		const structure = new Structure('players');
 		tag = parseTag(tag);
 		return from(async () => {
 			const data = await structure.request<Player>(`${tag}`, this.#token);
 			const player = new Player(data);
+			this.#cache.set(player.tag, player);
 			return player;
 		});
 	}
