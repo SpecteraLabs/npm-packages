@@ -7,6 +7,7 @@
 [![npm](https://img.shields.io/npm/dw/brawlstats)](https://www.npmjs.com/package/brawlstats)
 [![GitHub](https://img.shields.io/github/license/specteralabs/brawlstats)](https://github.com/SpecteraLabs/brawlstats/blob/main/LICENSE.md)
 [![npm](https://img.shields.io/npm/v/brawlstats?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/brawlstats)
+[![codecov](https://codecov.io/gh/SpecteraLabs/npm-packages/branch/main/graph/badge.svg)](https://codecov.io/gh/SpecteraLabs/npm-packages)
 </div>
 
 ## Description
