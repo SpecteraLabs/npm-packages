@@ -41,7 +41,7 @@ jobs:
       - name: Build test dependencies
         run: yarn turbo run build --no-deps
       - name: Run tests
-        run: yarn coverage
+        run: yarn jest --coverage
       - name: Store code coverage report
         uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535 # tag=v3
         with:
