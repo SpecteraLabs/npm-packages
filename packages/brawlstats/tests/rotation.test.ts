@@ -8,3 +8,9 @@ test('Check if an event rotation is returned', async () => {
 	});
 	expect(events.length).toBe(12);
 });
+
+test('Check if an event rotation is returned with Utc time', async () => {
+	const client = new Client();
+	const events = await client.rotation.get();
+	expect(events.length).toBe(12);
+});
