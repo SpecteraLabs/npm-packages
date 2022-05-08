@@ -1,2 +1,4 @@
 ignore:
   - "packages/brawlcli"
+  - "packages/brawlstats/src/lib/errors"
+  - "packages/brawlstats/src/lib/types"

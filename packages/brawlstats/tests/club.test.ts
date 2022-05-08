@@ -3,5 +3,6 @@ import { Client } from '../src';
 
 test('Check if a club is returned', async () => {
 	const client = new Client();
-	expect((await client.clubs.fetch('#2CU9RRVL')!).name).toBe('Oxygen Force');
+	const club = await client.clubs.fetch('#2CU9RRVL')!;
+	expect(club.name).toBe('Oxygen Force');
 });
