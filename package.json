@@ -4,10 +4,9 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "husky install .github/husky",
     "build": "turbo run build",
     "test": "turbo run test",
-	"coverage": "jest --coverage --ci",
+    "coverage": "jest --coverage --ci",
     "lint": "turbo run lint",
     "clean": "rm -rf packages/**/.turbo packages/**/dist",
     "commit": "git-cz",

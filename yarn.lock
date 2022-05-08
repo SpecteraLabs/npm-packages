@@ -486,7 +486,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@brawlstats/cli@workspace:packages/brawlcli"
   dependencies:
-    brawlstats: ^3.0.1
+    brawlstats: ^3.1.1
     commander: ^9.2.0
     find-up: ^6.3.0
   bin:
@@ -3169,7 +3169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"brawlstats@^3.0.1, brawlstats@workspace:packages/brawlstats":
+"brawlstats@^3.1.1, brawlstats@workspace:packages/brawlstats":
   version: 0.0.0-use.local
   resolution: "brawlstats@workspace:packages/brawlstats"
   dependencies:
