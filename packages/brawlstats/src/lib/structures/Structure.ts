@@ -1,7 +1,7 @@
 import { fetch } from '@sapphire/fetch';
 
 export class Structure {
-	#url = 'https://api.brawlstars.com/v1';
+	#url = 'https://bsproxy.royaleapi.dev/v1';
 	#endpoint: string;
 	public constructor(endpoint: string) {
 		this.#endpoint = endpoint;
