@@ -16,6 +16,10 @@
     "format": {
       "dependsOn": [],
       "outputs": []
-    }
+    },
+	"coverage": {
+		"dependsOn": [],
+		"outputs": ["coverage/**"]
+	}
   }
 }
