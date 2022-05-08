@@ -38,7 +38,7 @@
     "lerna": "^4.0.0",
     "prettier": "^2.6.2",
     "standard-version": "^9.3.2",
-    "ts-jest": "^28.0.1",
+    "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
     "tslib": "2.4.0",
     "tsup": "^5.12.7",
