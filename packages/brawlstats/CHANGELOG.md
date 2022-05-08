@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@3.0.1...brawlstats@3.1.0) (2022-05-08)
+
+
+### Bug Fixes
+
+* A bug which never let the cache work ([077f7f8](https://github.com/SpecteraLabs/npm-packages/commit/077f7f8a6b37edcf42f157feeb380a216674a7c9))
+* **deps:** update all non-major dependencies ([f4909b7](https://github.com/SpecteraLabs/npm-packages/commit/f4909b70c44899dbbb802714434db4b48cc7b288))
+
+
+### Features
+
+* export managers and types ([6e38447](https://github.com/SpecteraLabs/npm-packages/commit/6e38447aa5099e9739562ecd0495d4ddc4795de9))
+
+
+
+
+
 ## [3.0.1](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@3.0.0...brawlstats@3.0.1) (2022-04-14)
 
 

@@ -1,6 +1,6 @@
 {
 	"name": "@brawlstats/cli",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"private": true,
 	"description": "A cli wrapper around brawlstats",
 	"author": "@undied",
@@ -31,7 +31,7 @@
 	"packageManager": "yarn@3.2.0",
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
-		"brawlstats": "^3.0.1",
+		"brawlstats": "^3.1.0",
 		"commander": "^9.2.0",
 		"find-up": "^6.3.0"
 	}
