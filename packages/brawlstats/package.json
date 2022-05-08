@@ -29,7 +29,7 @@
 	"bugs": {
 		"url": "https://github.com/SpecteraLabs/npm-packages/issues"
 	},
-	"homepage": "https://github.com/SpecteraLabs/npm-packages/tree/main/packages/brawlstats#readme",
+	"homepage": "https://brawlstats.js.org/",
 	"keywords": [
 		"api",
 		"node",
