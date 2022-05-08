@@ -6835,7 +6835,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:^28.0.2":
+"jest@npm:^28.1.0":
   version: 28.1.0
   resolution: "jest@npm:28.1.0"
   dependencies:
@@ -9121,7 +9121,7 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.0.0
     husky: ^7.0.4
-    jest: ^28.0.2
+    jest: ^28.1.0
     lerna: ^4.0.0
     prettier: ^2.6.2
     standard-version: ^9.3.2
