@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@3.1.1...brawlstats@3.1.2) (2022-05-09)
+
+
+### Bug Fixes
+
+* remove umd bundle and reduce space ([0452853](https://github.com/SpecteraLabs/npm-packages/commit/0452853566810a24879ce9e3c8c0192c95a2f07c))
+
+
+
+
+
 ## [3.1.1](https://github.com/SpecteraLabs/npm-packages/compare/brawlstats@3.1.0...brawlstats@3.1.1) (2022-05-08)
 
 **Note:** Version bump only for package brawlstats
