@@ -11,5 +11,5 @@ test('Fetch multiple battlelogs', async () => {
 	const client = new Client();
 	const battlelogs = await client.battlelogs.fetchMany('#22QJ0JPVJ', '#28L9VLU0');
 	const [battlelog1, battlelog2] = battlelogs;
-	expect([battlelog1.length, battlelog2.length]).toStrictEqual([25, 25]);
+	expect([battlelog1.length, battlelog2.length]).toStrictEqual([25, 24]);
 });

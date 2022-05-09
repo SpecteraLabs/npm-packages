@@ -6,11 +6,11 @@ test('Check if an event rotation is returned', async () => {
 	const events = await client.rotation.get({
 		timezone: 'Asia/Kolkata'
 	});
-	expect(events.length).toBe(12);
+	expect(events.length).toBe(8);
 });
 
 test('Check if an event rotation is returned with Utc time', async () => {
 	const client = new Client();
 	const events = await client.rotation.get();
-	expect(events.length).toBe(12);
+	expect(events.length).toBe(8);
 });
