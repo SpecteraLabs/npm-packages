@@ -56,8 +56,8 @@ jobs:
             if ! cat $d/package.json | jq $ARGS.private; then
             pushd $d
               yarn npm publish --tag ${TAG}
-            fi
             popd
+            fi
           done
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
