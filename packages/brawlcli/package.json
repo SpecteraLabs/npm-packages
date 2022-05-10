@@ -18,6 +18,8 @@
 	"scripts": {
 		"build": "tsup",
 		"dev": "node .",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run",
 		"lint": "eslint src/**/*.ts --fix",
 		"format": "prettier -w src/**/*.ts"
 	},

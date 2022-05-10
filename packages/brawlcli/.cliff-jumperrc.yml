@@ -1,0 +1,4 @@
+name: cli
+monoRepo: true
+org: brawlstats
+packagePath: packages/brawlcli

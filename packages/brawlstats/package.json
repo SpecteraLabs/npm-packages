@@ -16,9 +16,8 @@
 	"scripts": {
 		"build": "tsup",
 		"test": "jest",
-		"sversion": "standard-version",
-		"commit": "git-cz",
-		"cz": "git-cz",
+		"bump": "cliff-jumper",
+		"check-update": "cliff-jumper --dry-run",
 		"watch": "tsup --watch",
 		"lint": "eslint src/**/*.ts --fix"
 	},

@@ -5,6 +5,14 @@
       "dependsOn": ["format", "lint"],
       "outputs": ["dist/**"]
     },
+    "bump": {
+      "dependsOn": [],
+      "outputs": ["CHANGELOG.md"]
+    },
+    "check-update": {
+      "dependsOn": [],
+      "outputs": []
+    },
     "lint": {
       "dependsOn": [],
       "outputs": []

@@ -1,0 +1,4 @@
+name: brawlstats
+monoRepo: true
+packagePath: packages/brawlstats
+tagTemplate: "{{full-name}}@{{new-version}}"
