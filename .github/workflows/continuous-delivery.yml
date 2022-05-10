@@ -41,10 +41,11 @@ jobs:
         run: yarn --immutable
       - name: Build all packages in proper order
         run: yarn build
-      - name: Bump Version & Publish
+      - name: Install jq
         uses: sergeysova/jq-action@v2
-        with: 
-          cmd: 'jq'
+        with:
+          cmd: jq
+      - name: Bump Version & Publish
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
           TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
