@@ -44,7 +44,7 @@ jobs:
       - name: Bump Version & Publish
         uses: sergeysova/jq-action@v2
         with: 
-          cmd: ''
+          cmd: 'jq'
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
           TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
