@@ -53,7 +53,7 @@ jobs:
           yarn turbo run bump --concurrency=1 -- --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
           for d in packages/*; do
             pushd $d
-            if ! [[exec cat $d/package.json | jq $ARGS.private]]; then
+            if "! [[exec cat $d/package.json | jq $ARGS.private]]"; then
               yarn npm publish --tag ${TAG}
             popd
           done
