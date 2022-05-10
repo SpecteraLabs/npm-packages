@@ -1,12 +1,13 @@
 import { Structure } from '../structures/Structure';
 import { Player } from '../structures/Player';
 import { parseTag } from '../helpers';
-import { from } from '../utils';
-import Collection from '@discordjs/collection';
+import { from, minutes } from '../utils';
+import NodeCache from 'node-cache';
+import { container } from '../../internal/container';
 
 export class PlayerManager {
 	#token: string;
-	#cache: Collection<string, Player> = new Collection();
+	#cache = new NodeCache();
 	public constructor(token: string) {
 		this.#token = token;
 	}
@@ -17,14 +18,14 @@ export class PlayerManager {
 	 */
 	public fetch(tag: string) {
 		if (this.#cache.has(tag)) {
-			return this.#cache.get(tag);
+			return this.#cache.get<Player>(tag);
 		}
 		const structure = new Structure('players');
 		tag = parseTag(tag);
 		return from(async () => {
 			const data = await structure.request<Player>(`${tag}`, this.#token);
 			const player = new Player(data);
-			this.#cache.set(player.tag, player);
+			this.#cache.set(player.tag, player, container.options?.cache?.player?.timeout ?? minutes(10));
 			return player;
 		});
 	}

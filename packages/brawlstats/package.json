@@ -43,7 +43,10 @@
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
 		"@discordjs/collection": "^0.6.0",
-		"@sapphire/fetch": "^2.3.1"
+		"@sapphire/fetch": "^2.3.1",
+		"node-cache": "^5.1.2"
 	},
-	"gitHead": "763b59db0325629ab5abddf90e729db611839610"
+	"bundledDependencies": [
+		"node-cache"
+	]
 }
