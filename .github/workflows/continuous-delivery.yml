@@ -52,6 +52,7 @@ jobs:
           yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
           yarn turbo run bump --concurrency=1 -- --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
+          echo ./packages/** | xargs -n 1 cp LICENSE
           for d in packages/*; do
             if [[ "$(cat $d/package.json | jq $ARGS.private)" == "null" ]]
             then
