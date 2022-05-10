@@ -53,7 +53,7 @@ jobs:
           yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
           yarn turbo run bump --concurrency=1 -- --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
           for d in packages/*; do
-            if ! cat $d/package.json | jq $ARGS.private; then
+            if ! [[ "$(cat $d/package.json | jq $ARGS.private)" == "null" ]]
             pushd $d
               yarn npm publish --tag ${TAG}
             popd
