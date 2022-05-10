@@ -42,6 +42,7 @@ jobs:
       - name: Build all packages in proper order
         run: yarn build
       - name: Bump Version & Publish
+        uses: sergeysova/jq-action@v2
         run: |
           # Resolve the tag to be used. "next" for push events, "pr-{prNumber}" for dispatch events.
           TAG=$([[ ${{ github.event_name }} == 'push' ]] && echo 'next' || echo 'pr-${{ github.event.inputs.prNumber }}')
@@ -50,7 +51,8 @@ jobs:
           yarn turbo run bump --concurrency=1 -- --preid "${TAG}.$(git rev-parse --verify --short HEAD)"
           for d in packages/*; do
             pushd $d
-            yarn npm publish --tag ${TAG}
+            if ! [[exec cat $d/package.json | jq $ARGS.private]]; then
+              yarn npm publish --tag ${TAG}
             popd
           done
         env:
