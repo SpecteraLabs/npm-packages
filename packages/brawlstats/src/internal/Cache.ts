@@ -8,7 +8,6 @@ export class Cache<T> extends EventEmitter {
 		this.on('clear', (map, tts) => {
 			setTimeout(() => {
 				map.clear();
-				console.log('Cache cleared');
 			}, tts).unref();
 		});
 	}
