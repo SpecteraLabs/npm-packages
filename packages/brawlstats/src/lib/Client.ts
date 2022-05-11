@@ -1,3 +1,4 @@
+import { container } from '../internal/container';
 import { makeBrawlersMap } from './makeBrawlersMap';
 import { BattlelogManager } from './managers/BattlelogManager';
 import { ClubManager } from './managers/ClubManager';
@@ -17,6 +18,7 @@ export class Client {
 
 	public constructor(options?: ClientOptions) {
 		this.options = options!;
+		container.options = this.options;
 		this.#token = options?.token ?? (process.env.BRAWLSTARS_TOKEN as string);
 		this.players = new PlayerManager(this.#token);
 		this.clubs = new ClubManager(this.#token);
@@ -35,4 +37,14 @@ export interface ClientOptions {
 	 * @default process.env.BRAWLSTARS_TOKEN
 	 */
 	token?: string;
+	cache?: CacheType;
+}
+
+interface CacheType {
+	player?: {
+		timeout: number;
+	};
+	club?: {
+		timeout: number;
+	};
 }
