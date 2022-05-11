@@ -5,9 +5,9 @@ export class Cache<T> extends EventEmitter {
 	private readonly cache: Collection<string, T> = new Collection();
 	public constructor() {
 		super();
-		this.on('clear', (map, tts) => {
+		this.on('clear', (key, map, tts) => {
 			setTimeout(() => {
-				map.clear();
+				map.delete(key);
 			}, tts).unref();
 		});
 	}
@@ -23,7 +23,7 @@ export class Cache<T> extends EventEmitter {
 
 	public set(key: string, value: T, tts: number) {
 		this.cache.set(key, value);
-		this.emit('clear', this.cache, tts);
+		this.emit('clear', key, this.cache, tts);
 	}
 
 	public has(key: string) {
@@ -32,5 +32,5 @@ export class Cache<T> extends EventEmitter {
 }
 
 interface CacheEvents {
-	clear: [map: Collection<string, unknown>, tts: number];
+	clear: [key: string, map: Collection<string, unknown>, tts: number];
 }
