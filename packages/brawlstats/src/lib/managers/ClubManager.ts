@@ -2,12 +2,12 @@ import { Structure } from '../structures/Structure';
 import { Club } from '../structures/Club';
 import { parseTag } from '../helpers';
 import { from, minutes } from '../utils';
-import NodeCache from 'node-cache';
 import { container } from '../../internal/container';
+import { Cache } from '../../internal/Cache';
 
 export class ClubManager {
 	#token: string;
-	#cache = new NodeCache();
+	private readonly cache = new Cache<Club>();
 	public constructor(token: string) {
 		this.#token = token;
 	}
@@ -18,15 +18,15 @@ export class ClubManager {
 	 * @param {String} tag The tag of the club.
 	 */
 	public fetch(tag: string) {
-		if (this.#cache.has(tag)) {
-			return this.#cache.get<Club>(tag);
+		if (this.cache.has(tag)) {
+			return this.cache.get(tag);
 		}
 		const structure = new Structure('clubs');
 		tag = parseTag(tag);
 		return from(async () => {
 			const data = await structure.request<Club>(`${tag}`, this.#token);
 			const club = new Club(data);
-			this.#cache.set(club.tag, club, container.options?.cache?.club?.timeout ?? minutes(10));
+			this.cache.set(club.tag, club, container.options?.cache?.club?.timeout ?? minutes(10));
 			return club;
 		});
 	}

@@ -1,9 +1,16 @@
 import { Stopwatch } from './Stopwatch';
 import { Client } from '../src';
 import 'dotenv/config';
+import { seconds } from '../src/lib/utils';
 
 test('test internal caching system for players', async () => {
-	const client = new Client();
+	const client = new Client({
+		cache: {
+			player: {
+				timeout: seconds(5)
+			}
+		}
+	});
 	const stopwatch = new Stopwatch();
 	// @ts-expect-error need this for test
 	const player = await client.players.fetch('#22QJ0JPVJ');

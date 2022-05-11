@@ -40,8 +40,12 @@ export function dateFromBrawlStars(value: string, timeZone: string) {
 	});
 }
 
+export function seconds(value: number) {
+	return value * 1000;
+}
+
 export function minutes(value: number) {
-	return value * 60;
+	return seconds(value) * 60;
 }
 
 export function hours(value: number) {
