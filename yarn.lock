@@ -2108,6 +2108,7 @@ __metadata:
   dependencies:
     "@discordjs/collection": ^0.6.0
     "@sapphire/fetch": ^2.3.1
+    depd: ^2.0.0
   languageName: unknown
   linkType: soft
 
@@ -6586,7 +6587,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.22.0
     "@typescript-eslint/parser": ^5.22.0
     cz-conventional-changelog: ^3.3.0
-    depd: ^2.0.0
     dotenv: 16.0.0
     eslint: ^8.15.0
     eslint-config-prettier: ^8.5.0
