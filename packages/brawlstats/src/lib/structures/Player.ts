@@ -2,7 +2,6 @@ import { Structure } from './Structure';
 import type { Battlelog, StarPowersEntityOrGadgetsEntity } from '../types';
 import { from } from '../utils';
 import { rumbleLevels } from '../../internal/functions';
-import deprecate from 'depd';
 
 /**
  * The entity which we use to construct every player entry.
@@ -25,13 +24,13 @@ export class Player extends Structure {
 	public bestTimeAsBigBrawler!: number;
 	public club!: PlayerClub;
 	public brawlers?: BrawlersEntity[] | null;
-	public bestRoboRumbleTime!: number;
 
 	public constructor(options: Omit<IPlayer, '3vs3Victories'>) {
 		super('players');
 		Object.assign(this, options);
 		this.roboRumbleLevel = rumbleLevels(options.bestRoboRumbleTime)!;
-		deprecate('brawlstats').property(this, 'bestRoboRumbleTime', 'Use Player#roboRumbleLevel instead');
+		// @ts-expect-error Please
+		delete this.bestRoboRumbleTime;
 	}
 
 	/**
@@ -61,7 +60,7 @@ export interface IPlayer {
 	trioVictories: number;
 	soloVictories: number;
 	duoVictories: number;
-	bestRoboRumbleTime: number;
+	bestRoboRumbleTime?: number;
 	bestTimeAsBigBrawler: number;
 	club: PlayerClub;
 	brawlers?: BrawlersEntity[] | null;

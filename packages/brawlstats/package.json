@@ -45,10 +45,6 @@
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
 		"@discordjs/collection": "^0.6.0",
-		"@sapphire/fetch": "^2.3.1",
-		"depd": "^2.0.0"
-	},
-	"bundledDependencies": [
-		"depd"
-	]
+		"@sapphire/fetch": "^2.3.1"
+	}
 }
