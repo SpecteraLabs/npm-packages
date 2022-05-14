@@ -55,4 +55,6 @@ export type BrawlersType =
 	| 'MEG'
 	| 'LOLA'
 	| 'FANG'
-	| 'EVE';
+	| 'EVE'
+	| 'JANET'
+	| 'BONNIE';

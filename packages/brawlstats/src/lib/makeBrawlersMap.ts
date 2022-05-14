@@ -642,5 +642,37 @@ export function makeBrawlersMap() {
 		starPowers: [{ id: 23000452, name: 'UNNATURAL ORDER' }],
 		gadgets: [{ id: 23000454, name: 'GOTTA GO!' }]
 	});
+	collection.set('JANET', {
+		id: 16000057,
+		name: 'JANET',
+		starPowers: [
+			{
+				id: 23000470,
+				name: 'STAGE VIEW'
+			}
+		],
+		gadgets: [
+			{
+				id: 23000472,
+				name: 'DROP THE BASS'
+			}
+		]
+	});
+	collection.set('BONNIE', {
+		id: 16000058,
+		name: 'BONNIE',
+		starPowers: [
+			{
+				id: 23000478,
+				name: 'BLACK POWDER'
+			}
+		],
+		gadgets: [
+			{
+				id: 23000480,
+				name: 'SUGAR RUSH'
+			}
+		]
+	});
 	return collection;
 }
