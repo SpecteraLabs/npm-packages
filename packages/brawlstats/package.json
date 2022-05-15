@@ -41,7 +41,7 @@
 		"wrapper"
 	],
 	"author": "@undied",
-	"packageManager": "yarn@3.2.0",
+	"packageManager": "yarn@3.2.1",
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
 		"@discordjs/collection": "^0.6.0",
