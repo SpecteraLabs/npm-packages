@@ -23,7 +23,7 @@
     "@commitlint/parse": "^16.2.1",
     "@favware/cliff-jumper": "^1.8.0",
     "@favware/npm-deprecate": "^1.0.4",
-    "@sapphire/eslint-config": "4.3.4",
+    "@sapphire/eslint-config": "4.3.5",
     "@sapphire/prettier-config": "1.4.3",
     "@sapphire/ts-config": "3.3.4",
     "@types/depd": "^1.1.32",
