@@ -43,7 +43,7 @@ jobs:
       - name: Run tests
         run: yarn coverage --silent
       - name: Store code coverage report
-        uses: actions/upload-artifact@6673cd052c4cd6fcf4b4e6e60ea986c889389535 # tag=v3
+        uses: actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5 # v3
         with:
           name: coverage
           path: coverage/
