@@ -41,10 +41,10 @@
 		"wrapper"
 	],
 	"author": "@undied",
-	"packageManager": "yarn@3.2.1",
+	"packageManager": "yarn@3.8.6",
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
-		"@discordjs/collection": "^0.6.0",
-		"@sapphire/fetch": "^2.3.1"
+		"@discordjs/collection": "^0.8.0",
+		"@sapphire/fetch": "^2.4.2"
 	}
 }

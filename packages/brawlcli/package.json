@@ -30,11 +30,11 @@
 		"#functions/*": "./dist/functions/*.js",
 		"#commands/*": "./dist/commands/*.js"
 	},
-	"packageManager": "yarn@3.2.1",
+	"packageManager": "yarn@3.8.6",
 	"prettier": "@sapphire/prettier-config",
 	"dependencies": {
 		"brawlstats": "^3.1.2",
-		"commander": "^9.2.0",
+		"commander": "^9.5.0",
 		"find-up": "^6.3.0"
 	}
 }
