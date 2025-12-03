@@ -39,7 +39,7 @@
     "husky": "^8.0.1",
     "jest": "^28.1.0",
     "prettier": "^2.6.2",
-    "standard-version": "^9.3.2",
+    "commit-and-tag-version": "^9.5.0",
     "ts-jest": "^28.0.2",
     "ts-node": "^10.7.0",
     "tslib": "2.4.0",
